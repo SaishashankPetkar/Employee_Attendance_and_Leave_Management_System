@@ -1,18 +1,22 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@{
+    Layout = null; // or set to your layout file if you have one
+}
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manager Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             height: 100vh;
-            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Blue gradient background */
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
         }
 
         .login-container {
@@ -22,7 +26,15 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
         }
+
+            .login-container.hidden {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
 
             .login-container h2 {
                 margin-bottom: 1rem;
@@ -57,24 +69,25 @@
             .btn-primary:active {
                 transform: scale(0.98);
             }
+      
     </style>
 </head>
-<body><center>
+<body>
     <div class="login-container">
-        <h2>Manager Login</h2>
-        <form method="post" action="/Manager/Login">
+        <h2>Admin Login</h2>
+        @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+        {
             @Html.AntiForgeryToken()
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required />
+                @Html.Label("username")
+                @Html.TextBox("username", null, new { @class = "form-control", required = "required" })
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required />
+                @Html.Label("password")
+                @Html.Password("password", null, new { @class = "form-control", required = "required" })
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+        }
     </div>
-</center>
 </body>
 </html>

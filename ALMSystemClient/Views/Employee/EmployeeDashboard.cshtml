@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager Dashboard</title>
+    <title>Employee Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
@@ -24,7 +24,7 @@
             }
 
         .navbar-brand {
-            font-size: 1.5em;
+            font-size: 1.8em;
             color: #ffffff !important;
         }
 
@@ -95,28 +95,10 @@
             font-size: 1.2em;
         }
 
-        .btn-dashboard {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border-radius: 5px;
-            color: #fff;
+        .btn {
             font-size: 1.2em;
-            text-align: center;
-            text-decoration: none;
-            background: #2575fc;
-            border: none;
-            transition: background 0.3s, transform 0.3s;
+            padding: 0.75em 1.5em;
         }
-
-            .btn-dashboard:hover {
-                background: #1d64d1;
-            }
-
-            .btn-dashboard:active {
-                transform: scale(0.98);
-            }
 
         .welcome-box {
             background-color: rgba(255, 255, 255, 0.2);
@@ -134,71 +116,58 @@
             .welcome-box p {
                 font-size: 1.2em;
             }
-
-        .details-box {
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-            .details-box h3 {
-                font-size: 2em;
-                margin-bottom: 10px;
-            }
-
-            .details-box p {
-                font-size: 1.2em;
-            }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
-        <a href="/Manager/ViewEmployees">View Employees</a>
-        <a href="/Manager/ViewPendingAttendance">View Pending Attendance Requests</a>
-        <a href="/Manager/ViewPendingLeave">View Pending Leave Requests</a>
+        <a href="#">Apply for Leave</a>
+        <a href="#">Submit Attendance</a>
+        <a href="#">View Project Details</a>
     </div>
 
     <div class="content">
         <div class="welcome-box">
-            <h3>Welcome to the Manager Dashboard</h3>
-            <p>Select an option from the sidebar to manage the system.</p>
-        </div>
-
-        <div class="details-box">
-            <h3>Manager Details</h3>
-            <p>Name: John Doe</p>
-            <p>Position: Project Manager</p>
-            <p>Department: IT</p>
-            <p>Email: johndoe@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <h3>Welcome to LeaveMaster Dashboard</h3>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">View Employees</h5>
-                <p class="card-text">Manage employees under your supervision.</p>
-                <a href="/Manager/ViewEmployees" class="btn-dashboard">View Employees</a>
+                <h5 class="card-title">Employee Details</h5>
+                <p class="card-text">Name: LeaveMaster</p>
+                <p class="card-text">Position: Software Engineer</p>
+                <p class="card-text">Department: HealthCare</p>
+                <p class="card-text">Email: leavemaster@gmail.com</p>
+                <p class="card-text">Phone: 9393939495</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Pending Attendance Requests</h5>
-                <p class="card-text">Review and manage pending attendance requests.</p>
-                <a href="/Manager/ViewPendingAttendance" class="btn-dashboard">View Requests</a>
+                <h5 class="card-title">Apply for Leave</h5>
+                <p class="card-text">Submit your leave requests here.</p>
+                <a href="#" class="btn btn-primary">Apply Leave</a>
             </div>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Pending Leave Requests</h5>
-                <p class="card-text">Review and manage pending leave requests.</p>
-                <a href="/Manager/ViewPendingLeave" class="btn-dashboard">View Requests</a>
+                <h5 class="card-title">Submit Attendance</h5>
+                <p class="card-text">Record your attendance here.</p>
+                <a href="#" class="btn btn-primary">Submit Attendance</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">View Project Details</h5>
+                <p class="card-text">View details related to your current projects.</p>
+                <a href="#" class="btn btn-primary">View Projects</a>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

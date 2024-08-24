@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null; // or set to your layout file if you have one
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+            .login-container.hidden {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+
+            .login-container h2 {
+                margin-bottom: 1rem;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+            }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #2575fc;
+                box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+            }
+
+        .btn-primary {
+            background: #2575fc;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.5rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+            .btn-primary:hover {
+                background: #1d64d1;
+            }
+
+            .btn-primary:active {
+                transform: scale(0.98);
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Employee Login</h2>
+        @using (Html.BeginForm("EmployeeLogin", "Employee", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.Label("username")
+                @Html.TextBox("username", null, new { @class = "form-control", required = "required" })
+            </div>
+            <div class="form-group">
+                @Html.Label("password")
+                @Html.Password("password", null, new { @class = "form-control", required = "required" })
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        }
+    </div>
+</body>
+</html>

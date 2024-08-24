@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LeaveMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="AttendanceID" />
+          </Key>
+          <Property Name="AttendanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="ProjectID" Type="int" Nullable="false" />
+          <Property Name="AttendanceDate" Type="date" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApprovalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="ManagerID" Type="int" Nullable="false" />
+          <Property Name="Atd_Status" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Phone" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="HireDate" Type="date" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="ManagerID" Type="int" />
+          <Property Name="ProjectID" Type="int" Nullable="false" />
+          <Property Name="LeaveBalance" Type="int" />
+          <Property Name="No_of_leave" Type="int" />
+          <Property Name="Emp_status" Type="varchar" MaxLength="10" />
+          <Property Name="Password" Type="varchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Leaves">
+          <Key>
+            <PropertyRef Name="LeaveID" />
+          </Key>
+          <Property Name="LeaveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" Nullable="false" />
+          <Property Name="LeaveType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Reason" Type="varchar" MaxLength="255" />
+          <Property Name="ApprovalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="ManagerID" Type="int" Nullable="false" />
+          <Property Name="Leave_Status" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Prj_status" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Attendanc__Emplo__45F365D3">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attendanc__Manag__47DBAE45">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attendanc__Proje__46E78A0C">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__Manag__403A8C7D">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Employees1" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Employees1">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__Proje__412EB0B6">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__RoleI__3F466844">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Leaves__Employee__4CA06362">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Leaves__ManagerI__4D94879B">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="spAddAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="int" Mode="In" />
+          <Parameter Name="ProjectID" Type="int" Mode="In" />
+          <Parameter Name="AttendanceDate" Type="date" Mode="In" />
+          <Parameter Name="Status" Type="varchar" Mode="In" />
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spAddEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeName" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Phone" Type="varchar" Mode="In" />
+          <Parameter Name="HireDate" Type="date" Mode="In" />
+          <Parameter Name="RoleID" Type="int" Mode="In" />
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="LeaveBalance" Type="int" Mode="In" />
+          <Parameter Name="No_of_leave" Type="int" Mode="In" />
+          <Parameter Name="Emp_status" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spAddLeaveRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="int" Mode="In" />
+          <Parameter Name="StartDate" Type="date" Mode="In" />
+          <Parameter Name="EndDate" Type="date" Mode="In" />
+          <Parameter Name="LeaveType" Type="varchar" Mode="In" />
+          <Parameter Name="Reason" Type="varchar" Mode="In" />
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spAddProject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProjectName" Type="varchar" Mode="In" />
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spApproveRejectAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AttendanceID" Type="int" Mode="In" />
+          <Parameter Name="ApprovalStatus" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spApproveRejectLeaveRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LeaveID" Type="int" Mode="In" />
+          <Parameter Name="ApprovalStatus" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spDeleteAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AttendanceID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spDeleteEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spDeleteLeaveRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LeaveID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spDeleteProject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProjectID" Type="int" Mode="In" />
+          <Parameter Name="Prj_status" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spGetPendingAttendanceApprovals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetPendingLeaveRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spUpdateAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AttendanceID" Type="int" Mode="In" />
+          <Parameter Name="Status" Type="varchar" Mode="In" />
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spUpdateEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="int" Mode="In" />
+          <Parameter Name="EmployeeName" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Phone" Type="varchar" Mode="In" />
+          <Parameter Name="HireDate" Type="date" Mode="In" />
+          <Parameter Name="RoleID" Type="int" Mode="In" />
+          <Parameter Name="ManagerID" Type="int" Mode="In" />
+          <Parameter Name="ProjectID" Type="int" Mode="In" />
+          <Parameter Name="LeaveBalance" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spUpdateLeaveRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LeaveID" Type="int" Mode="In" />
+          <Parameter Name="ApprovalStatus" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spUpdateProject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProjectID" Type="int" Mode="In" />
+          <Parameter Name="ProjectName" Type="varchar" Mode="In" />
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="LeaveMasterModelStoreContainer">
+          <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leaves" EntityType="Self.Leaves" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Attendanc__Emplo__45F365D3" Association="Self.FK__Attendanc__Emplo__45F365D3">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Attendance" EntitySet="Attendance" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__Manag__47DBAE45" Association="Self.FK__Attendanc__Manag__47DBAE45">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Attendance" EntitySet="Attendance" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__Proje__46E78A0C" Association="Self.FK__Attendanc__Proje__46E78A0C">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Attendance" EntitySet="Attendance" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__Manag__403A8C7D" Association="Self.FK__Employees__Manag__403A8C7D">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Employees1" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__Proje__412EB0B6" Association="Self.FK__Employees__Proje__412EB0B6">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__RoleI__3F466844" Association="Self.FK__Employees__RoleI__3F466844">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Leaves__Employee__4CA06362" Association="Self.FK__Leaves__Employee__4CA06362">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Leaves__ManagerI__4D94879B" Association="Self.FK__Leaves__ManagerI__4D94879B">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LeaveMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="AttendanceID" />
+          </Key>
+          <Property Name="AttendanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="ProjectID" Type="Int32" Nullable="false" />
+          <Property Name="AttendanceDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApprovalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerID" Type="Int32" Nullable="false" />
+          <Property Name="Atd_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Attendanc__Emplo__45F365D3" FromRole="Attendance" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK__Attendanc__Manag__47DBAE45" FromRole="Attendance" ToRole="Employees" />
+          <NavigationProperty Name="Project" Relationship="Self.FK__Attendanc__Proje__46E78A0C" FromRole="Attendance" ToRole="Projects" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="ManagerID" Type="Int32" />
+          <Property Name="ProjectID" Type="Int32" Nullable="false" />
+          <Property Name="LeaveBalance" Type="Int32" />
+          <Property Name="No_of_leave" Type="Int32" />
+          <Property Name="Emp_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Emplo__45F365D3" FromRole="Employees" ToRole="Attendance" />
+          <NavigationProperty Name="Attendances1" Relationship="Self.FK__Attendanc__Manag__47DBAE45" FromRole="Employees" ToRole="Attendance" />
+          <NavigationProperty Name="Employees1" Relationship="Self.FK__Employees__Manag__403A8C7D" FromRole="Employees" ToRole="Employees1" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK__Employees__Manag__403A8C7D" FromRole="Employees1" ToRole="Employees" />
+          <NavigationProperty Name="Project" Relationship="Self.FK__Employees__Proje__412EB0B6" FromRole="Employees" ToRole="Projects" />
+          <NavigationProperty Name="Role" Relationship="Self.FK__Employees__RoleI__3F466844" FromRole="Employees" ToRole="Roles" />
+          <NavigationProperty Name="Leaves" Relationship="Self.FK__Leaves__Employee__4CA06362" FromRole="Employees" ToRole="Leaves" />
+          <NavigationProperty Name="Leaves1" Relationship="Self.FK__Leaves__ManagerI__4D94879B" FromRole="Employees" ToRole="Leaves" />
+        </EntityType>
+        <EntityType Name="Leaf">
+          <Key>
+            <PropertyRef Name="LeaveID" />
+          </Key>
+          <Property Name="LeaveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LeaveType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerID" Type="Int32" Nullable="false" />
+          <Property Name="Leave_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Leaves__Employee__4CA06362" FromRole="Leaves" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK__Leaves__ManagerI__4D94879B" FromRole="Leaves" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Prj_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Proje__46E78A0C" FromRole="Projects" ToRole="Attendance" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__Proje__412EB0B6" FromRole="Projects" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__RoleI__3F466844" FromRole="Roles" ToRole="Employees" />
+        </EntityType>
+        <Association Name="FK__Attendanc__Emplo__45F365D3">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attendanc__Manag__47DBAE45">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attendanc__Proje__46E78A0C">
+          <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__Manag__403A8C7D">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Employees1">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__Proje__412EB0B6">
+          <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employees__RoleI__3F466844">
+          <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Leaves__Employee__4CA06362">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Leaves__ManagerI__4D94879B">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LeaveMasterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Leaves" EntityType="Self.Leaf" />
+          <EntitySet Name="Projects" EntityType="Self.Project" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <AssociationSet Name="FK__Attendanc__Emplo__45F365D3" Association="Self.FK__Attendanc__Emplo__45F365D3">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Attendance" EntitySet="Attendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__Manag__47DBAE45" Association="Self.FK__Attendanc__Manag__47DBAE45">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Attendance" EntitySet="Attendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__Proje__46E78A0C" Association="Self.FK__Attendanc__Proje__46E78A0C">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Attendance" EntitySet="Attendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__Manag__403A8C7D" Association="Self.FK__Employees__Manag__403A8C7D">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Employees1" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__Proje__412EB0B6" Association="Self.FK__Employees__Proje__412EB0B6">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employees__RoleI__3F466844" Association="Self.FK__Employees__RoleI__3F466844">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Leaves__Employee__4CA06362" Association="Self.FK__Leaves__Employee__4CA06362">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Leaves__ManagerI__4D94879B" Association="Self.FK__Leaves__ManagerI__4D94879B">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+          <FunctionImport Name="spAddAttendance">
+            <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+            <Parameter Name="ProjectID" Mode="In" Type="Int32" />
+            <Parameter Name="AttendanceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Status" Mode="In" Type="String" />
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spAddEmployee">
+            <Parameter Name="EmployeeName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Phone" Mode="In" Type="String" />
+            <Parameter Name="HireDate" Mode="In" Type="DateTime" />
+            <Parameter Name="RoleID" Mode="In" Type="Int32" />
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="LeaveBalance" Mode="In" Type="Int32" />
+            <Parameter Name="No_of_leave" Mode="In" Type="Int32" />
+            <Parameter Name="Emp_status" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spAddLeaveRequest">
+            <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LeaveType" Mode="In" Type="String" />
+            <Parameter Name="Reason" Mode="In" Type="String" />
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spAddProject">
+            <Parameter Name="ProjectName" Mode="In" Type="String" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spApproveRejectAttendance">
+            <Parameter Name="AttendanceID" Mode="In" Type="Int32" />
+            <Parameter Name="ApprovalStatus" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spApproveRejectLeaveRequest">
+            <Parameter Name="LeaveID" Mode="In" Type="Int32" />
+            <Parameter Name="ApprovalStatus" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spDeleteAttendance">
+            <Parameter Name="AttendanceID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spDeleteEmployee">
+            <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spDeleteLeaveRequest">
+            <Parameter Name="LeaveID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spDeleteProject">
+            <Parameter Name="ProjectID" Mode="In" Type="Int32" />
+            <Parameter Name="Prj_status" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spGetPendingAttendanceApprovals" ReturnType="Collection(LeaveMasterModel.spGetPendingAttendanceApprovals_Result)">
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spGetPendingLeaveRequests" ReturnType="Collection(LeaveMasterModel.spGetPendingLeaveRequests_Result)">
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spUpdateAttendance">
+            <Parameter Name="AttendanceID" Mode="In" Type="Int32" />
+            <Parameter Name="Status" Mode="In" Type="String" />
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spUpdateEmployee">
+            <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+            <Parameter Name="EmployeeName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Phone" Mode="In" Type="String" />
+            <Parameter Name="HireDate" Mode="In" Type="DateTime" />
+            <Parameter Name="RoleID" Mode="In" Type="Int32" />
+            <Parameter Name="ManagerID" Mode="In" Type="Int32" />
+            <Parameter Name="ProjectID" Mode="In" Type="Int32" />
+            <Parameter Name="LeaveBalance" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spUpdateLeaveRequest">
+            <Parameter Name="LeaveID" Mode="In" Type="Int32" />
+            <Parameter Name="ApprovalStatus" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spUpdateProject">
+            <Parameter Name="ProjectID" Mode="In" Type="Int32" />
+            <Parameter Name="ProjectName" Mode="In" Type="String" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spGetPendingAttendanceApprovals_Result">
+          <Property Type="Int32" Name="AttendanceID" Nullable="false" />
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="Int32" Name="ProjectID" Nullable="false" />
+          <Property Type="DateTime" Name="AttendanceDate" Nullable="false" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApprovalStatus" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ManagerID" Nullable="false" />
+          <Property Type="String" Name="Atd_Status" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spGetPendingLeaveRequests_Result">
+          <Property Type="Int32" Name="LeaveID" Nullable="false" />
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" />
+          <Property Type="String" Name="LeaveType" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Reason" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ApprovalStatus" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ManagerID" Nullable="false" />
+          <Property Type="String" Name="Leave_Status" Nullable="false" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LeaveMasterModelStoreContainer" CdmEntityContainer="LeaveMasterEntities">
+          <EntitySetMapping Name="Attendances">
+            <EntityTypeMapping TypeName="LeaveMasterModel.Attendance">
+              <MappingFragment StoreEntitySet="Attendance">
+                <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="Atd_Status" ColumnName="Atd_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="LeaveMasterModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="LeaveBalance" ColumnName="LeaveBalance" />
+                <ScalarProperty Name="No_of_leave" ColumnName="No_of_leave" />
+                <ScalarProperty Name="Emp_status" ColumnName="Emp_status" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leaves">
+            <EntityTypeMapping TypeName="LeaveMasterModel.Leaf">
+              <MappingFragment StoreEntitySet="Leaves">
+                <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="Leave_Status" ColumnName="Leave_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="LeaveMasterModel.Project">
+              <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Prj_status" ColumnName="Prj_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="LeaveMasterModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spAddAttendance" FunctionName="LeaveMasterModel.Store.spAddAttendance" />
+          <FunctionImportMapping FunctionImportName="spAddEmployee" FunctionName="LeaveMasterModel.Store.spAddEmployee" />
+          <FunctionImportMapping FunctionImportName="spAddLeaveRequest" FunctionName="LeaveMasterModel.Store.spAddLeaveRequest" />
+          <FunctionImportMapping FunctionImportName="spAddProject" FunctionName="LeaveMasterModel.Store.spAddProject" />
+          <FunctionImportMapping FunctionImportName="spApproveRejectAttendance" FunctionName="LeaveMasterModel.Store.spApproveRejectAttendance" />
+          <FunctionImportMapping FunctionImportName="spApproveRejectLeaveRequest" FunctionName="LeaveMasterModel.Store.spApproveRejectLeaveRequest" />
+          <FunctionImportMapping FunctionImportName="spDeleteAttendance" FunctionName="LeaveMasterModel.Store.spDeleteAttendance" />
+          <FunctionImportMapping FunctionImportName="spDeleteEmployee" FunctionName="LeaveMasterModel.Store.spDeleteEmployee" />
+          <FunctionImportMapping FunctionImportName="spDeleteLeaveRequest" FunctionName="LeaveMasterModel.Store.spDeleteLeaveRequest" />
+          <FunctionImportMapping FunctionImportName="spDeleteProject" FunctionName="LeaveMasterModel.Store.spDeleteProject" />
+          <FunctionImportMapping FunctionImportName="spGetPendingAttendanceApprovals" FunctionName="LeaveMasterModel.Store.spGetPendingAttendanceApprovals">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LeaveMasterModel.spGetPendingAttendanceApprovals_Result">
+                <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="Atd_Status" ColumnName="Atd_Status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spGetPendingLeaveRequests" FunctionName="LeaveMasterModel.Store.spGetPendingLeaveRequests">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LeaveMasterModel.spGetPendingLeaveRequests_Result">
+                <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="Leave_Status" ColumnName="Leave_Status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spUpdateAttendance" FunctionName="LeaveMasterModel.Store.spUpdateAttendance" />
+          <FunctionImportMapping FunctionImportName="spUpdateEmployee" FunctionName="LeaveMasterModel.Store.spUpdateEmployee" />
+          <FunctionImportMapping FunctionImportName="spUpdateLeaveRequest" FunctionName="LeaveMasterModel.Store.spUpdateLeaveRequest" />
+          <FunctionImportMapping FunctionImportName="spUpdateProject" FunctionName="LeaveMasterModel.Store.spUpdateProject" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

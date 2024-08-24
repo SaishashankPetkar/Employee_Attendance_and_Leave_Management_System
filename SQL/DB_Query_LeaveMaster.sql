@@ -10,7 +10,7 @@ select * from Roles
 CREATE TABLE Projects (
     ProjectID INT PRIMARY KEY IDENTITY(1,1),
     ProjectName VARCHAR(100) NOT NULL,
-    Description VARCHAR(255)
+    Description VARCHAR(255),
 );
 select * from Projects
 ALTER TABLE Projects
@@ -56,8 +56,7 @@ CREATE TABLE Attendance (
 ALTER TABLE Attendance
 ADD Atd_Status VARCHAR(50) NOT NULL Default 'Active'
 select * from Attendance
-Alter table Attendance 
-Drop Column Leave_Status 
+
 -- Leaves Table
 CREATE TABLE Leaves (
     LeaveID INT PRIMARY KEY IDENTITY(1,1),
@@ -359,7 +358,7 @@ INSERT INTO Leaves (EmployeeID, StartDate, EndDate, LeaveType, Reason, ManagerID
 VALUES (3, '2024-08-20', '2024-08-22', 'Sick Leave', 'Medical reasons', 1, 'Approved');
 GO
 
-
+select * from Employees
 
 
  

@@ -80,7 +80,23 @@ namespace ALMSystemWebApi.Controllers
             }
 
             db.Employees.Add(employee);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var entityValidationError in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError
+             in entityValidationError.ValidationErrors)
+                    {
+                        Console.WriteLine("Property:   
+             { 0}, Error: { 1}
+                        ", validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeID }, employee);
         }

@@ -121,22 +121,23 @@
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
-        <a href="/Admin/ManageEmployees">Manage Employees</a>
-        <a href="/Admin/ManageProjects">Manage Projects</a>
-        <a href="/Admin/ViewAttendanceRequests">Attendance Requests</a>
-        <a href="/Admin/ViewLeaveRequests">Leave Requests</a>
+        <a href="@Url.Action("EmployeeDetails", "Admin")">Manage Employees</a>
+        <a href="@Url.Action("ProjectDetails", "Admin")">Manage Projects</a>
+        <a href="@Url.Action("AttendanceRequests", "Admin")">Attendance Requests</a>
+        <a href="@Url.Action("LeaveRequests", "Admin")">Leave Requests</a>
     </div>
 
     <div class="content">
         <div class="welcome-box">
             <h3>Welcome to the Admin Dashboard</h3>
+            <p>Use the sidebar to navigate through different sections of the admin panel.</p>
         </div>
 
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Manage Employees</h5>
                 <p class="card-text">Add, update, or delete employee information and manage their roles.</p>
-                <a href="@Url.Action("EmployeeDetails", "Admin")" class="btn btn-primary">Manage Employee</a>
+                <a href="@Url.Action("EmployeeDetails", "Admin")" class="btn btn-primary">Manage Employees</a>
             </div>
         </div>
 
@@ -144,7 +145,7 @@
             <div class="card-body">
                 <h5 class="card-title">Manage Projects</h5>
                 <p class="card-text">Add, update, or delete project information and assign projects to employees.</p>
-                <a href="/Admin/ManageProjects" class="btn btn-primary">Manage Projects</a>
+                <a href="@Url.Action("ProjectDetails", "Admin")" class="btn btn-primary">Manage Projects</a>
             </div>
         </div>
 
@@ -152,7 +153,7 @@
             <div class="card-body">
                 <h5 class="card-title">Attendance Requests</h5>
                 <p class="card-text">View and manage pending attendance requests.</p>
-                <a href="/Admin/ViewAttendanceRequests" class="btn btn-primary">View Requests</a>
+                <a href="@Url.Action("AttendanceRequests", "Admin")" class="btn btn-primary">View Requests</a>
             </div>
         </div>
 
@@ -160,9 +161,12 @@
             <div class="card-body">
                 <h5 class="card-title">Leave Requests</h5>
                 <p class="card-text">View and manage pending leave requests.</p>
-                <a href="/Admin/ViewLeaveRequests" class="btn btn-primary">View Requests</a>
+                <a href="@Url.Action("LeaveRequests", "Admin")" class="btn btn-primary">View Requests</a>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

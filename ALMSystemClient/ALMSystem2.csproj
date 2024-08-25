@@ -175,6 +175,14 @@
     <Content Include="Views\Admin\EmployeeDetails.cshtml" />
     <Content Include="Views\Admin\CreateNewEmployee.cshtml" />
     <Content Include="Views\Admin\EditEmployee.cshtml" />
+    <Content Include="Views\Employee\ApplyLeave.cshtml" />
+    <Content Include="Views\Employee\SubmitAttendance.cshtml" />
+    <Content Include="Views\Employee\ViewProjects.cshtml" />
+    <Content Include="Views\Admin\ProjectDetails.cshtml" />
+    <Content Include="Views\Admin\CreateNewProject.cshtml" />
+    <Content Include="Views\Admin\EditProject.cshtml" />
+    <Content Include="Views\Admin\AttendanceRequests.cshtml" />
+    <Content Include="Views\Admin\LeaveRequests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

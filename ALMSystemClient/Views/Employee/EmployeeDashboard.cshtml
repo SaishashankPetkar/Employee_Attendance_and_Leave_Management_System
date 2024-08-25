@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -121,15 +122,22 @@
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
-        <a href="#">Apply for Leave</a>
-        <a href="#">Submit Attendance</a>
-        <a href="#">View Project Details</a>
+        <a href="@Url.Action("ApplyLeave", "Employee")">Apply for Leave</a>
+        <a href="@Url.Action("SubmitAttendance", "Employee")">Submit Attendance</a>
+        <a href="@Url.Action("ViewProjects", "Employee")">View Project Details</a>
     </div>
 
     <div class="content">
         <div class="welcome-box">
             <h3>Welcome to LeaveMaster Dashboard</h3>
         </div>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Message"]
+            </div>
+        }
 
         <div class="card">
             <div class="card-body">
@@ -146,7 +154,7 @@
             <div class="card-body">
                 <h5 class="card-title">Apply for Leave</h5>
                 <p class="card-text">Submit your leave requests here.</p>
-                <a href="#" class="btn btn-primary">Apply Leave</a>
+                <a href="@Url.Action("ApplyLeave", "Employee")" class="btn btn-primary">Apply Leave</a>
             </div>
         </div>
 
@@ -154,7 +162,7 @@
             <div class="card-body">
                 <h5 class="card-title">Submit Attendance</h5>
                 <p class="card-text">Record your attendance here.</p>
-                <a href="#" class="btn btn-primary">Submit Attendance</a>
+                <a href="@Url.Action("SubmitAttendance", "Employee")" class="btn btn-primary">Submit Attendance</a>
             </div>
         </div>
 
@@ -162,7 +170,7 @@
             <div class="card-body">
                 <h5 class="card-title">View Project Details</h5>
                 <p class="card-text">View details related to your current projects.</p>
-                <a href="#" class="btn btn-primary">View Projects</a>
+                <a href="@Url.Action("ViewProjects", "Employee")" class="btn btn-primary">View Projects</a>
             </div>
         </div>
     </div>

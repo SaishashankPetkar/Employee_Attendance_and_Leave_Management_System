@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Apply Leave";
+}
+
+<h2>Apply Leave</h2>
+<form action="/Employee/ApplyLeave" method="post">
+    <div class="form-group">
+        <label for="leaveType">Leave Type</label>
+        <select id="leaveType" name="leaveType" class="form-control">
+            <option value="Sick">Sick Leave</option>
+            <option value="Casual">Casual Leave</option>
+            <option value="Annual">Annual Leave</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" name="startDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" name="endDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea id="reason" name="reason" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

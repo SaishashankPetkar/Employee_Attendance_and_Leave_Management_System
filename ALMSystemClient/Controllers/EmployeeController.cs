@@ -30,6 +30,42 @@ namespace ALMSystem2.Controllers
             return View();
         }
 
+        public ActionResult ApplyLeave()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ApplyLeave(FormCollection form)
+        {
+
+
+            TempData["Message"] = "Leave application submitted successfully!";
+            return RedirectToAction("EmployeeDashboard");
+        }
+
+        public ActionResult SubmitAttendance()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SubmitAttendance(FormCollection form)
+        {
+
+
+            TempData["Message"] = "Attendance submitted successfully!";
+            return RedirectToAction("EmployeeDashboard");
+        }
+
+        public ActionResult ViewProjects()
+        {
+            var projects = new List<string> { "Project A", "Project B", "Project C" };
+            ViewBag.Projects = projects;
+
+            return View();
+        }
+
         // Simulated method for example purposes
         private bool IsValidUser(string username, string password)
         {

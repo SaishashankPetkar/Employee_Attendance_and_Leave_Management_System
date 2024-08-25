@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Attendance Requests";
+}
+
+<h2>Attendance Requests</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var request in ViewBag.AttendanceRequests)
+        {
+            <tr>
+                <td>@request.EmployeeName</td>
+                <td>@request.Date</td>
+                <td>@request.Status</td>
+                <td>
+                    @using (Html.BeginForm("ApproveAttendanceRequest", "Admin", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@request.EmployeeName" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    }
+                    @using (Html.BeginForm("RejectAttendanceRequest", "Admin", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@request.EmployeeName" />
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>*@
+</table>
+
+<a href="@Url.Action("AdminDashboard", "Admin")" class="btn btn-primary">Back to Dashboard</a>

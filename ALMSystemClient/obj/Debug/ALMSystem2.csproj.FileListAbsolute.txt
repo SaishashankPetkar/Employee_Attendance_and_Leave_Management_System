@@ -155,4 +155,3 @@ C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CoreCompileInputs.
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.dll
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.pdb
-C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache

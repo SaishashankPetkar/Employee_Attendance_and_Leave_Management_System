@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "View Projects";
+}
+
+<h2>Project Details</h2>
+<ul class="list-group">
+    @foreach (var project in ViewBag.Projects as List<string>)
+    {
+        <li class="list-group-item">@project</li>
+    }
+</ul>

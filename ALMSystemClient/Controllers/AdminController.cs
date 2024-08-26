@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ALMSystem2.Controllers
@@ -11,6 +9,10 @@ namespace ALMSystem2.Controllers
         // GET: Admin/Login
         public ActionResult AdminLogin()
         {
+            if (Session["User"] != null) // Check if the user is already authenticated
+            {
+                return RedirectToAction("AdminDashboard");
+            }
             return View();
         }
 
@@ -19,8 +21,9 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AdminLogin(string username, string password)
         {
-            if (username == "admin" && password == "password") // Example validation
+            if (IsValidAdmin(username, password))
             {
+                Session["User"] = username; // Store user information in session
                 return RedirectToAction("AdminDashboard");
             }
 
@@ -31,12 +34,29 @@ namespace ALMSystem2.Controllers
         // GET: Admin/Dashboard
         public ActionResult AdminDashboard()
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
             return View();
+        }
+
+        // GET: Admin/Logout
+        public ActionResult Logout()
+        {
+            Session.Clear(); // Clear all session data
+            Session.Abandon(); // End the session
+            return RedirectToAction("AdminLogin");
         }
 
         // GET: Admin/EmployeeDetails
         public ActionResult EmployeeDetails()
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             var employees = new List<object>
             {
                 new { EmployeeID = 1, EmployeeName = "John Doe", Email = "johndoe@example.com", Phone = "123-456-7890", HireDate = DateTime.Now.AddYears(-5), RoleID = 1, ManagerID = 2, ProjectID = 1, LeaveBalance = 10, No_of_leave = 5, Emp_status = "Active" }
@@ -50,6 +70,10 @@ namespace ALMSystem2.Controllers
         // GET: Admin/CreateNewEmployee
         public ActionResult CreateNewEmployee()
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
             return View();
         }
 
@@ -58,6 +82,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateNewEmployee(FormCollection form)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Extract form values
             string employeeName = form["EmployeeName"];
             string email = form["Email"];
@@ -79,6 +108,11 @@ namespace ALMSystem2.Controllers
         // GET: Admin/EditEmployee/1
         public ActionResult EditEmployee(int id)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Fetch the employee from the database using the id (replace with actual data retrieval logic)
             var employee = new
             {
@@ -105,6 +139,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditEmployee(int id, FormCollection form)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Extract form values (replace with actual logic)
             string employeeName = form["EmployeeName"];
             string email = form["Email"];
@@ -127,6 +166,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteEmployee(int id)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Simulate delete logic here (replace with actual delete logic)
 
             return RedirectToAction("EmployeeDetails");
@@ -135,6 +179,11 @@ namespace ALMSystem2.Controllers
         // GET: Admin/ProjectDetails
         public ActionResult ProjectDetails()
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             var projects = new List<object>
             {
                 new { ProjectID = 1, ProjectName = "Project Alpha", StartDate = DateTime.Now.AddMonths(-6), EndDate = DateTime.Now.AddMonths(6), Status = "Active" }
@@ -148,6 +197,10 @@ namespace ALMSystem2.Controllers
         // GET: Admin/CreateNewProject
         public ActionResult CreateNewProject()
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
             return View();
         }
 
@@ -156,6 +209,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateNewProject(FormCollection form)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Extract form values
             string projectName = form["ProjectName"];
             DateTime startDate = Convert.ToDateTime(form["StartDate"]);
@@ -171,6 +229,11 @@ namespace ALMSystem2.Controllers
         // GET: Admin/EditProject/1
         public ActionResult EditProject(int id)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Fetch the project from the database using the id (replace with actual data retrieval logic)
             var project = new
             {
@@ -191,6 +254,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditProject(int id, FormCollection form)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Extract form values (replace with actual logic)
             string projectName = form["ProjectName"];
             DateTime startDate = Convert.ToDateTime(form["StartDate"]);
@@ -207,6 +275,11 @@ namespace ALMSystem2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteProject(int id)
         {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
             // Simulate delete logic here (replace with actual delete logic)
 
             return RedirectToAction("ProjectDetails");
@@ -215,67 +288,104 @@ namespace ALMSystem2.Controllers
         // GET: Admin/AttendanceRequests
         public ActionResult AttendanceRequests()
         {
-            var attendanceRequests = new List<object>
+            if (Session["User"] == null) // Check if the user is authenticated
             {
-                new { EmployeeName = "John Doe", Date = "2024-08-20", Status = "Pending" },
-                new { EmployeeName = "Jane Smith", Date = "2024-08-21", Status = "Pending" }
+                return RedirectToAction("AdminLogin");
+            }
+
+            var requests = new List<object>
+            {
+                new { RequestID = 1, EmployeeName = "John Doe", RequestDate = DateTime.Now.AddDays(-1), Status = "Pending" }
+                // Add more requests as necessary
             };
 
-            ViewBag.AttendanceRequests = attendanceRequests; // Pass data to view
+            ViewBag.Requests = requests; // Pass data to view
             return View();
         }
 
-        // POST: Admin/ApproveAttendanceRequest/5
+        // POST: Admin/ApproveAttendanceRequest/1
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ApproveAttendanceRequest(int id)
         {
-            // Logic to approve the attendance request
-            TempData["Message"] = "Attendance request approved.";
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            // Simulate approval logic here (replace with actual approval logic)
+
             return RedirectToAction("AttendanceRequests");
         }
 
-        // POST: Admin/RejectAttendanceRequest/5
+        // POST: Admin/RejectAttendanceRequest/1
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RejectAttendanceRequest(int id)
         {
-            // Logic to reject the attendance request
-            TempData["Message"] = "Attendance request rejected.";
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            // Simulate rejection logic here (replace with actual rejection logic)
+
             return RedirectToAction("AttendanceRequests");
         }
 
         // GET: Admin/LeaveRequests
         public ActionResult LeaveRequests()
         {
-            var leaveRequests = new List<object>
+            if (Session["User"] == null) // Check if the user is authenticated
             {
-                new { EmployeeName = "Michael Brown", LeaveType = "Sick Leave", StartDate = "2024-08-20", EndDate = "2024-08-22", Status = "Pending" },
-                new { EmployeeName = "Emily Davis", LeaveType = "Annual Leave", StartDate = "2024-08-25", EndDate = "2024-08-30", Status = "Pending" }
+                return RedirectToAction("AdminLogin");
+            }
+
+            var requests = new List<object>
+            {
+                new { RequestID = 1, EmployeeName = "Jane Doe", RequestDate = DateTime.Now.AddDays(-2), Status = "Pending" }
+                // Add more requests as necessary
             };
 
-            ViewBag.LeaveRequests = leaveRequests; // Pass data to view
+            ViewBag.Requests = requests; // Pass data to view
             return View();
         }
 
-        // POST: Admin/ApproveLeaveRequest/5
+        // POST: Admin/ApproveLeaveRequest/1
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ApproveLeaveRequest(int id)
         {
-            // Logic to approve the leave request
-            TempData["Message"] = "Leave request approved.";
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            // Simulate approval logic here (replace with actual approval logic)
+
             return RedirectToAction("LeaveRequests");
         }
 
-        // POST: Admin/RejectLeaveRequest/5
+        // POST: Admin/RejectLeaveRequest/1
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RejectLeaveRequest(int id)
         {
-            // Logic to reject the leave request
-            TempData["Message"] = "Leave request rejected.";
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            // Simulate rejection logic here (replace with actual rejection logic)
+
             return RedirectToAction("LeaveRequests");
+        }
+
+        // Helper method to validate admin credentials
+        private bool IsValidAdmin(string username, string password)
+        {
+            // Replace with actual credential validation logic
+            return username == "admin" && password == "password";
         }
     }
 }

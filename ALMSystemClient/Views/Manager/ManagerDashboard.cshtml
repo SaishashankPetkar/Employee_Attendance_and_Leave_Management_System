@@ -156,9 +156,10 @@
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
-        <a href="/Manager/ViewEmployees">View Employees</a>
-        <a href="/Manager/ViewPendingAttendance">View Pending Attendance Requests</a>
-        <a href="/Manager/ViewPendingLeave">View Pending Leave Requests</a>
+        <a href="@Url.Action("ViewEmployees", "Manager")">View Employees</a>
+        <a href="@Url.Action("ViewPendingAttendance", "Manager")">View Pending Attendance Requests</a>
+        <a href="@Url.Action("ViewPendingLeave", "Manager")">View Pending Leave Requests</a>
+        <a href="@Url.Action("Logout", "Manager")" class="btn-dashboard">Logout</a>
     </div>
 
     <div class="content">
@@ -180,7 +181,7 @@
             <div class="card-body">
                 <h5 class="card-title">View Employees</h5>
                 <p class="card-text">Manage employees under your supervision.</p>
-                <a href="/Manager/ViewEmployees" class="btn-dashboard">View Employees</a>
+                <a href="@Url.Action("ViewEmployees", "Manager")" class="btn-dashboard">View Employees</a>
             </div>
         </div>
 
@@ -188,7 +189,7 @@
             <div class="card-body">
                 <h5 class="card-title">Pending Attendance Requests</h5>
                 <p class="card-text">Review and manage pending attendance requests.</p>
-                <a href="/Manager/ViewPendingAttendance" class="btn-dashboard">View Requests</a>
+                <a href="@Url.Action("ViewPendingAttendance", "Manager")" class="btn-dashboard">View Requests</a>
             </div>
         </div>
 
@@ -196,7 +197,7 @@
             <div class="card-body">
                 <h5 class="card-title">Pending Leave Requests</h5>
                 <p class="card-text">Review and manage pending leave requests.</p>
-                <a href="/Manager/ViewPendingLeave" class="btn-dashboard">View Requests</a>
+                <a href="@Url.Action("ViewPendingLeave", "Manager")" class="btn-dashboard">View Requests</a>
             </div>
         </div>
     </div>

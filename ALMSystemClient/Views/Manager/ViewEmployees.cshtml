@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Set the correct layout file if you have one
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Include your CSS styling here */
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Employees</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @* Hardcoded sample data *@
+                <tr>
+                    <td>1</td>
+                    <td>Jane Doe</td>
+                    <td>janedoe@example.com</td>
+                    <td>555-1234</td>
+                    <td>Developer</td>
+                    <td>
+                        <a href="@Url.Action("EditEmployee", "Manager", new { id = 1 })" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="@Url.Action("DeleteEmployee", "Manager", new { id = 1 })" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>John Smith</td>
+                    <td>johnsmith@example.com</td>
+                    <td>555-5678</td>
+                    <td>Designer</td>
+                    <td>
+                        <a href="@Url.Action("EditEmployee", "Manager", new { id = 2 })" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="@Url.Action("DeleteEmployee", "Manager", new { id = 2 })" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+@*<tbody>
+        @foreach (var employee in ViewBag.Employees)
+        {
+            <tr>
+                <td>@employee.EmployeeID</td>
+                <td>@employee.EmployeeName</td>
+                <td>@employee.Email</td>
+                <td>@employee.Phone</td>
+                <td>@employee.HireDate.ToShortDateString()</td>
+                <td>@employee.Role</td>
+                <td>@employee.Status</td>
+            </tr>
+        }
+    </tbody>*@

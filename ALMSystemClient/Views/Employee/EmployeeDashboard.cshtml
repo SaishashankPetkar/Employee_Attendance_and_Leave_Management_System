@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -125,11 +124,12 @@
         <a href="@Url.Action("ApplyLeave", "Employee")">Apply for Leave</a>
         <a href="@Url.Action("SubmitAttendance", "Employee")">Submit Attendance</a>
         <a href="@Url.Action("ViewProjects", "Employee")">View Project Details</a>
+        <a href="@Url.Action("Logout", "Employee")">Logout</a>
     </div>
 
     <div class="content">
         <div class="welcome-box">
-            <h3>Welcome to LeaveMaster Dashboard</h3>
+            <h3>Welcome to the Employee Dashboard</h3>
         </div>
 
         @if (TempData["Message"] != null)

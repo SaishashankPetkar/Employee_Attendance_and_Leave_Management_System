@@ -186,6 +186,10 @@
     <Content Include="Views\Manager\ViewEmployees.cshtml" />
     <Content Include="Views\Manager\ViewPendingAttendance.cshtml" />
     <Content Include="Views\Manager\ViewPendingLeave.cshtml" />
+    <Content Include="Views\Employee\LeaveDetails.cshtml" />
+    <Content Include="Views\Employee\CreateLeave.cshtml" />
+    <Content Include="Views\Employee\AttendanceDetails.cshtml" />
+    <Content Include="Views\Employee\CreateAttendance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,28 +1,27 @@
 ﻿@{
-    ViewBag.Title = "Apply Leave";
+    ViewBag.Title = "Apply for Leave";
 }
 
-<h2>Apply Leave</h2>
-<form action="/Employee/ApplyLeave" method="post">
+<h2>Apply for Leave</h2>
+
+@using (Html.BeginForm("ApplyLeave", "Employee", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
     <div class="form-group">
-        <label for="leaveType">Leave Type</label>
-        <select id="leaveType" name="leaveType" class="form-control">
-            <option value="Sick">Sick Leave</option>
-            <option value="Casual">Casual Leave</option>
-            <option value="Annual">Annual Leave</option>
-        </select>
+        @Html.Label("Leave Type")
+        @Html.DropDownList("LeaveType", new SelectList(new[] { "Sick", "Casual", "Annual" }), "Select Leave Type", new { @class = "form-control" })
     </div>
     <div class="form-group">
-        <label for="startDate">Start Date</label>
-        <input type="date" id="startDate" name="startDate" class="form-control" required />
+        @Html.Label("Start Date")
+        @Html.TextBox("StartDate", null, new { @class = "form-control", type = "date" })
     </div>
     <div class="form-group">
-        <label for="endDate">End Date</label>
-        <input type="date" id="endDate" name="endDate" class="form-control" required />
+        @Html.Label("End Date")
+        @Html.TextBox("EndDate", null, new { @class = "form-control", type = "date" })
     </div>
     <div class="form-group">
-        <label for="reason">Reason</label>
-        <textarea id="reason" name="reason" class="form-control" required></textarea>
+        @Html.Label("Reason")
+        @Html.TextArea("Reason", null, new { @class = "form-control" })
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <button type="submit" class="btn btn-primary">Submit Leave Application</button>
+}

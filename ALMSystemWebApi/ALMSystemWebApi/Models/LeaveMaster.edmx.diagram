@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f605fa761f04836b130a6462448121c" Name="Diagram1">
+        <EntityTypeShape EntityType="LeaveMasterModel.Attendance" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeaveMasterModel.Employee" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeaveMasterModel.Leaf" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeaveMasterModel.Project" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeaveMasterModel.Role" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Attendanc__Emplo__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Attendanc__Manag__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Attendanc__Proje__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Employees__Manag__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Employees__Proje__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Employees__RoleI__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Leaves__Employee__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="LeaveMasterModel.FK__Leaves__ManagerI__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

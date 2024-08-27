@@ -1,0 +1,122 @@
+﻿
+@{
+    Layout = null; // or set to your layout file if you have one
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+            .login-container.hidden {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+
+            .login-container h2 {
+                margin-bottom: 1rem;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+            }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #2575fc;
+                box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+            }
+
+        .btn-primary {
+            background: #2575fc;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.5rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+            .btn-primary:hover {
+                background: #1d64d1;
+            }
+
+            .btn-primary:active {
+                transform: scale(0.98);
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Manager Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div id="error-message" class="text-danger mt-2"></div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+$('#loginForm').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: 'https://localhost:44323/api/Manager/Login',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    Email: $('#email').val(),
+                    Password: $('#password').val()
+                }),
+                success: function (data) {
+                    console.log('Login successful:', data);
+                    // Store employee details in a cookie
+                    document.cookie = "employee=" + encodeURIComponent(JSON.stringify(data)) + "; path=/";
+                    window.location.href = '/Manager/ManagerDashboard';
+                },
+                error: function (xhr) {
+                    console.error(xhr.responseText);
+                    if (xhr.status === 401) {
+                        $('#error-message').text('Invalid email or password.');
+                    } else {
+                        $('#error-message').text('An error occurred. Please try again.');
+                    }
+                }
+            });
+        });</script>
+</body>
+</html>

@@ -1,54 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Backup Project\\ALMSystemClient\\",
+  "WorkspaceRootPath": "D:\\Final Project\\ALMSystemClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\manager\\managerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\manager\\managerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\manager\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\manager\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\final project\\almsystemclient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\shared\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\shared\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|D:\\Backup Project\\ALMSystemClient\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\final project\\almsystemclient\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\backup project\\almsystemclient\\views\\admin\\manageemployees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:views\\admin\\manageemployees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,157 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ManagerDashboard.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Manager\\ManagerDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Manager\\ManagerDashboard.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Manager\\ManagerDashboard.cshtml",
-              "RelativeToolTip": "Views\\Manager\\ManagerDashboard.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-23T08:14:43.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Login.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\Login.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Login.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T11:26:19.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAJ4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T10:18:30.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Manager\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Manager\\Login.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Manager\\Login.cshtml",
-              "RelativeToolTip": "Views\\Manager\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-23T05:51:10.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T10:07:04.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Controllers\\ManagerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ManagerController.cs",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Controllers\\ManagerController.cs",
-              "RelativeToolTip": "Controllers\\ManagerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T05:43:27.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "D:\\Final Project\\ALMSystemClient\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Final Project\\ALMSystemClient\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAowA4AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T07:00:09.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Views\\Shared\\LoginViewModel.cs",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\LoginViewModel.cs",
-              "RelativeToolTip": "Views\\Shared\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T11:23:10.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T12:42:40.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "D:\\Final Project\\ALMSystemClient\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Final Project\\ALMSystemClient\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T06:59:06.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T13:05:44.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ManageEmployees.cshtml",
-              "DocumentMoniker": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\ManageEmployees.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ManageEmployees.cshtml",
-              "ToolTip": "D:\\Backup Project\\ALMSystemClient\\Views\\Admin\\ManageEmployees.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ManageEmployees.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T10:19:07.827Z",
               "EditorCaption": ""
             }
           ]

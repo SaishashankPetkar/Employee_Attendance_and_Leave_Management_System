@@ -1,176 +1,561 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using System.Collections.Generic;
-using System.Web.Mvc;
+using ALMSystem2.Models;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace ALMSystem2.Controllers
 {
     public class AdminController : Controller
     {
-        // Hardcoded admin credentials
-        private string AdminUsername => "admin";
-        private string AdminPassword => "securepassword123";
+        private readonly string _baseAddress = "https://localhost:44323/api/";
 
-        // Login Action
-        [HttpGet]
-        public ActionResult Login()
+        // Private method to get HttpClient
+        private HttpClient GetHttpClient()
         {
+            var webclient = new HttpClient
+            {
+                BaseAddress = new Uri(_baseAddress)
+            };
+            return webclient;
+        }
+
+        private bool IsValidAdmin(string username, string password)
+        {
+            // Replace with actual credential validation logic
+            return username == "admin" && password == "password";
+        }
+        // GET: Admin/Login
+        public ActionResult AdminLogin()
+        {
+            if (Session["User"] != null) // Check if the user is already authenticated
+            {
+                return RedirectToAction("AdminDashboard");
+            }
             return View();
         }
 
+        // POST: Admin/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string username, string password)
+        public ActionResult AdminLogin(string username, string password)
         {
-            if (username == AdminUsername && password == AdminPassword)
+            if (IsValidAdmin(username, password))
             {
-                Session["Admin"] = username;
-                return RedirectToAction("Index", "Admin");
+                Session["User"] = username; // Store user information in session
+                return RedirectToAction("AdminDashboard");
             }
 
-            ViewBag.Message = "Invalid login attempt.";
+            // Set error message in ViewBag
+            ViewBag.ErrorMessage = "Invalid login Credentials.";
             return View();
         }
 
-        // Dashboard
-        public ActionResult Index()
+        // GET: Admin/Dashboard
+        public ActionResult AdminDashboard()
         {
-            //if (Session["Admin"] == null)
-            //{
-            //    return RedirectToAction("Login");
-            //}
-
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
             return View();
         }
 
-        // Add/Update Employee
+        // GET: Admin/Logout
+        public ActionResult Logout()
+        {
+            Session.Clear(); // Clear all session data
+            Session.Abandon(); // End the session
+            return RedirectToAction("AdminLogin");
+        }
+
+        // GET: Admin/Dashboard
+
+        public async Task<ActionResult> EmployeeDetails()
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            IEnumerable<MVCEmployees> emplist = null;
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Employees");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultdata = response.Content.ReadAsStringAsync().Result;
+                    emplist = JsonConvert.DeserializeObject<List<MVCEmployees>>(resultdata);
+                }
+                else
+                {
+                    emplist = Enumerable.Empty<MVCEmployees>();
+                }
+                return View(emplist);
+            }
+        }
+
+        private async Task<IEnumerable<Role>> FetchRoles()
+        {
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Roles");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<Role>>(resultData);
+                }
+                return Enumerable.Empty<Role>();
+            }
+        }
+
+        private async Task<IEnumerable<Project>> FetchProjects()
+        {
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Projects");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<Project>>(resultData);
+                }
+                return Enumerable.Empty<Project>();
+            }
+        }
+
         [HttpGet]
-        public ActionResult CreateEmployee()
+        public async Task<ActionResult> CreateNewEmployee()
         {
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            var viewModel = new EmployeeCreateViewModel
+            {
+                Employee = new MVCEmployees(),
+                Roles = await FetchRoles(),
+                Projects = await FetchProjects()
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateEmployee(string name, string role)
+        public async Task<ActionResult> CreateNewEmployee(EmployeeCreateViewModel viewModel)
         {
-            // Placeholder for adding/updating employee
-            // Use ViewBag or TempData to pass messages if needed
-            return RedirectToAction("ListEmployees");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            if (ModelState.IsValid)
+            {
+                using (var webclient = GetHttpClient())
+                {
+                    var response = await webclient.PostAsJsonAsync("Employees", viewModel.Employee);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("EmployeeDetails");
+                    }
+                    ModelState.AddModelError(string.Empty, "Error occurred while saving the employee.");
+                }
+            }
+
+            // Fetch roles and projects again if model is not valid
+            viewModel.Roles = await FetchRoles();
+            viewModel.Projects = await FetchProjects();
+
+            return View(viewModel);
         }
 
-        // Edit Employee
-        [HttpGet]
-        public ActionResult EditEmployee(int id)
+
+        // GET: Admin/EditEmployee/1
+        public async Task<ActionResult> EditEmployee(int id)
         {
-            // Placeholder for editing employee
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            if (id == 0)
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }
+            MVCEmployees emp = null;
+            IEnumerable<Role> roles = null;
+            IEnumerable<Project> projects = null;
+            using (var webclient = GetHttpClient())
+            {
+                var edittalk = await webclient.GetAsync($"Employees/{id}");
+                if (edittalk.IsSuccessStatusCode)
+                {
+                    var resultdata = await edittalk.Content.ReadAsStringAsync();
+                    emp = JsonConvert.DeserializeObject<MVCEmployees>(resultdata);
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Some error occurred while processing your request");
+                }
+
+                var rolesResponse = await webclient.GetAsync("Roles");
+                if (rolesResponse.IsSuccessStatusCode)
+                {
+                    var rolesData = await rolesResponse.Content.ReadAsStringAsync();
+                    roles = JsonConvert.DeserializeObject<List<Role>>(rolesData);
+                }
+
+                var projectsResponse = await webclient.GetAsync("Projects");
+                if (projectsResponse.IsSuccessStatusCode)
+                {
+                    var projectsData = await projectsResponse.Content.ReadAsStringAsync();
+                    projects = JsonConvert.DeserializeObject<List<Project>>(projectsData);
+                }
+            }
+            if (emp == null)
+            {
+                return HttpNotFound();
+            }
+            var viewModel = new EmployeeCreateViewModel
+            {
+                Employee = emp,
+                Roles = roles,
+                Projects = projects
+            };
+            return View(viewModel);
         }
+
+        // POST: Admin/EditEmployee/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> EditEmployee(EmployeeCreateViewModel viewModel)
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            if (ModelState.IsValid)
+            {
+                using (var webclient = GetHttpClient())
+                {
+                    var response = await webclient.PutAsJsonAsync($"Employees/{viewModel.Employee.EmployeeID}", viewModel.Employee);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("EmployeeDetails");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Error Occurred");
+                    }
+                }
+            }
+
+            viewModel.Roles = await FetchRoles();
+            viewModel.Projects = await FetchProjects();
+
+            return View(viewModel);
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditEmployee(int id, string name, string role)
+        public async Task<ActionResult> DeleteEmployee(int id)
         {
-            // Placeholder for updating employee
-            return RedirectToAction("ListEmployees");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Employees/SoftDelete/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("EmployeeDetails");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while deleting the employee.");
+                }
+            }
+
+            return RedirectToAction("EmployeeDetails");
         }
 
-        // Delete Employee
-        public ActionResult DeleteEmployee(int id)
+        public async Task<ActionResult> ProjectDetails()
         {
-            // Placeholder for deleting employee
-            return RedirectToAction("ListEmployees");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            IEnumerable<Project> projects = null;
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Project");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    projects = JsonConvert.DeserializeObject<List<Project>>(resultData);
+                }
+                else
+                {
+                    projects = Enumerable.Empty<Project>();
+                }
+            }
+            return View(projects);
         }
 
-        // List Employees
-        public ActionResult ListEmployees()
+        // GET: Admin/CreateNewProject
+        public ActionResult CreateNewProject()
         {
-            // Placeholder for listing employees
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
             return View();
         }
 
-        // Add/Update Project
-        [HttpGet]
-        public ActionResult CreateProject()
-        {
-            return View();
-        }
-
+        // POST: Admin/CreateNewProject
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateProject(string projectName)
+        public async Task<ActionResult> CreateNewProject(Project project)
         {
-            // Placeholder for adding/updating project
-            return RedirectToAction("ListProjects");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsJsonAsync("Project", project);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("ProjectDetails");
+                }
+                ModelState.AddModelError(string.Empty, "Insertion Failed.. try later");
+            }
+            return View(project);
         }
 
-        // Edit Project
-        [HttpGet]
-        public ActionResult EditProject(int id)
+        // GET: Admin/EditProject/1
+        public async Task<ActionResult> EditProject(int id)
         {
-            // Placeholder for editing project
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            // Fetch the project from the database using the id (replace with actual data retrieval logic)
+            Project project = null;
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync($"Project/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    project = JsonConvert.DeserializeObject<Project>(resultData);
+                }
+            }
+            if (project == null)
+            {
+                return HttpNotFound();
+            }
+            return View(project);
         }
 
+        // POST: Admin/EditProject/1
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProject(int id, string projectName)
+        public async Task<ActionResult> EditProject(Project project)
         {
-            // Placeholder for updating project
-            return RedirectToAction("ListProjects");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            if (ModelState.IsValid)
+            {
+                using (var webclient = GetHttpClient())
+                {
+                    var response = await webclient.PutAsJsonAsync($"Project/{project.ProjectID}", project);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("ProjectDetails");
+                    }
+                    ModelState.AddModelError(string.Empty, "Update Failed.. try later");
+                }
+            }
+            return View(project);
         }
 
-        // Delete Project
-        public ActionResult DeleteProject(int id)
-        {
-            // Placeholder for deleting project
-            return RedirectToAction("ListProjects");
-        }
-
-        // List Projects
-        public ActionResult ListProjects()
-        {
-            // Placeholder for listing projects
-            return View();
-        }
-
-        // Assign Project
-        [HttpGet]
-        public ActionResult AssignProject()
-        {
-            return View();
-        }
-
+        // POST: Admin/DeleteProject/1
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AssignProject(int employeeId, int projectId)
+        public async Task<ActionResult> DeleteProject(int id)
         {
-            // Placeholder for assigning project to employee
-            return RedirectToAction("Index");
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Project/SoftDelete/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("ProjectDetails");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while deleting the employee.");
+                }
+            }
+
+            return RedirectToAction("ProjectDetails");
         }
 
-        // View Pending Attendance
-        public ActionResult ViewPendingAttendance()
+        public async Task<ActionResult> AttendanceRequests()
         {
-            // Placeholder for viewing pending attendance requests
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            IEnumerable<Attendance> attendanceList = null;
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Attendance");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    attendanceList = JsonConvert.DeserializeObject<List<Attendance>>(resultData);
+                }
+                else
+                {
+                    attendanceList = Enumerable.Empty<Attendance>();
+                }
+            }
+            return View(attendanceList);
         }
 
-        // View Pending Leave
-        public ActionResult ViewPendingLeave()
+        // POST: Admin/ApproveAttendanceRequest/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ApproveAttendanceRequest(int id)
         {
-            // Placeholder for viewing pending leave requests
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Attendance/Approve/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("AttendanceRequests");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while Approving the attendance.");
+                }
+            }
+
+            return RedirectToAction("AttendanceRequests");
         }
 
-        // View Project Attendance
-        public ActionResult ViewProjectAttendance(string period)
+        // POST: Admin/RejectAttendanceRequest/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RejectAttendanceRequest(int id)
         {
-            // Placeholder for viewing project attendance for different periods
-            return View();
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Attendance/Reject/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("AttendanceRequests");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while Rejecting the attendance.");
+                }
+            }
+
+            return RedirectToAction("AttendanceRequests");
+        }
+
+        // GET: Admin/LeaveRequests
+        public async Task<ActionResult> LeaveRequests()
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            IEnumerable<Leave> leaveList = null;
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.GetAsync("Leave");
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultData = await response.Content.ReadAsStringAsync();
+                    leaveList = JsonConvert.DeserializeObject<List<Leave>>(resultData);
+                }
+                else
+                {
+                    leaveList = Enumerable.Empty<Leave>();
+                }
+            }
+            return View(leaveList);
+        }
+
+        // POST: Admin/ApproveLeaveRequest/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ApproveLeaveRequest(int id)
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Leave/Approve/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("LeaveRequests");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while Approving the Leave.");
+                }
+            }
+
+            return RedirectToAction("LeaveRequests");
+        }
+
+        // POST: Admin/RejectLeaveRequest/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RejectLeaveRequest(int id)
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+            using (var webclient = GetHttpClient())
+            {
+                var response = await webclient.PostAsync($"Leave/Reject/{id}", null);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("LeaveRequests");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Error occurred while Rejecting the Leave.");
+                }
+            }
+
+            return RedirectToAction("LeaveRequests");
         }
     }
 }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ALMSystem2.Models.Leave>
+@{
+    ViewBag.Title = "Leave Requests";
+}
+
+<h2>Leave Requests</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Leave ID</th>
+            <th>Employee ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Leave Type</th>
+            <th>Reason</th>
+            <th>Approval Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.LeaveID)</td>
+                <td>@Html.DisplayFor(modelItem => item.EmployeeID)</td>
+                <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.EndDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.LeaveType)</td>
+                <td>@Html.DisplayFor(modelItem => item.Reason)</td>
+                <td>@Html.DisplayFor(modelItem => item.ApprovalStatus)</td>
+                <td>
+                    @using (Html.BeginForm("ApproveLeaveRequest", "Manager", FormMethod.Post, new { id = item.LeaveID }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", item.LeaveID)
+                        <input type="hidden" name="id" value="" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    }
+                    @using (Html.BeginForm("RejectLeaveRequest", "Manager", FormMethod.Post, new { id = item.LeaveID }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", item.LeaveID)
+                        <input type="hidden" name="id" value="" />
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("ManagerDashboard", "Manager")" class="btn btn-primary">Back to Dashboard</a>
+

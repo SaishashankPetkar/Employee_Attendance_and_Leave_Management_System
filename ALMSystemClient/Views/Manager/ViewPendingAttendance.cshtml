@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml"; // Set the correct layout file if you have one
 }
@@ -66,4 +67,57 @@
         </tr>
     }*@
 
+=======
+﻿@model IEnumerable<ALMSystem2.Models.Attendance>
+@{
+    ViewBag.Title = "Attendance Requests";
+}
+
+<h2>Attendance Requests</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Attendance ID</th>
+            <th>Employee ID</th>
+            <th>Project ID</th>
+            <th>Attendance Date</th>
+            <th>Status</th>
+            <th>ApprovalStatus</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.AttendanceID)</td>
+                <td>@Html.DisplayFor(modelItem => item.EmployeeID)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProjectID)</td>
+                <td>@Html.DisplayFor(modelItem => item.AttendanceDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>@Html.DisplayFor(modelItem => item.ApprovalStatus)</td>
+                <td>
+                    @using (Html.BeginForm("ApproveAttendanceRequest", "Manager", FormMethod.Post, new { id = item.AttendanceID }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", item.AttendanceID)
+                        <input type="hidden" name="id" value="" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    }
+                    @using (Html.BeginForm("RejectAttendanceRequest", "Manager", FormMethod.Post, new { id = item.AttendanceID }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", item.AttendanceID)
+                        <input type="hidden" name="id" value="" />
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("ManagerDashboard", "Manager")" class="btn btn-primary">Back to Dashboard</a>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 

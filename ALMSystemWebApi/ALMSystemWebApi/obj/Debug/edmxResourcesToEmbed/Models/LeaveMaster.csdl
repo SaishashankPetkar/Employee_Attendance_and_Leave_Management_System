@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LeaveMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="AttendanceID" />
+    </Key>
+    <Property Name="AttendanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="AttendanceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApprovalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerID" Type="Int32" Nullable="false" />
+    <Property Name="Atd_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Attendanc__Emplo__45F365D3" FromRole="Attendance" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK__Attendanc__Manag__47DBAE45" FromRole="Attendance" ToRole="Employees" />
+    <NavigationProperty Name="Project" Relationship="Self.FK__Attendanc__Proje__46E78A0C" FromRole="Attendance" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="ManagerID" Type="Int32" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="LeaveBalance" Type="Int32" />
+    <Property Name="No_of_leave" Type="Int32" />
+    <Property Name="Emp_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Emplo__45F365D3" FromRole="Employees" ToRole="Attendance" />
+    <NavigationProperty Name="Attendances1" Relationship="Self.FK__Attendanc__Manag__47DBAE45" FromRole="Employees" ToRole="Attendance" />
+    <NavigationProperty Name="Employees1" Relationship="Self.FK__Employees__Manag__403A8C7D" FromRole="Employees" ToRole="Employees1" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK__Employees__Manag__403A8C7D" FromRole="Employees1" ToRole="Employees" />
+    <NavigationProperty Name="Project" Relationship="Self.FK__Employees__Proje__412EB0B6" FromRole="Employees" ToRole="Projects" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__Employees__RoleI__3F466844" FromRole="Employees" ToRole="Roles" />
+    <NavigationProperty Name="Leaves" Relationship="Self.FK__Leaves__Employee__4CA06362" FromRole="Employees" ToRole="Leaves" />
+    <NavigationProperty Name="Leaves1" Relationship="Self.FK__Leaves__ManagerI__4D94879B" FromRole="Employees" ToRole="Leaves" />
+  </EntityType>
+  <EntityType Name="Leaf">
+    <Key>
+      <PropertyRef Name="LeaveID" />
+    </Key>
+    <Property Name="LeaveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LeaveType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ApprovalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerID" Type="Int32" Nullable="false" />
+    <Property Name="Leave_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Leaves__Employee__4CA06362" FromRole="Leaves" ToRole="Employees" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK__Leaves__ManagerI__4D94879B" FromRole="Leaves" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Prj_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Proje__46E78A0C" FromRole="Projects" ToRole="Attendance" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__Proje__412EB0B6" FromRole="Projects" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__RoleI__3F466844" FromRole="Roles" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK__Attendanc__Emplo__45F365D3">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Manag__47DBAE45">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Proje__46E78A0C">
+    <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__Manag__403A8C7D">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__Proje__412EB0B6">
+    <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__RoleI__3F466844">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Leaves__Employee__4CA06362">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Leaves" Type="Self.Leaf" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Leaves">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Leaves__ManagerI__4D94879B">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Leaves" Type="Self.Leaf" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Leaves">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LeaveMasterEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Leaves" EntityType="Self.Leaf" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <AssociationSet Name="FK__Attendanc__Emplo__45F365D3" Association="Self.FK__Attendanc__Emplo__45F365D3">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Manag__47DBAE45" Association="Self.FK__Attendanc__Manag__47DBAE45">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Proje__46E78A0C" Association="Self.FK__Attendanc__Proje__46E78A0C">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__Manag__403A8C7D" Association="Self.FK__Employees__Manag__403A8C7D">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__Proje__412EB0B6" Association="Self.FK__Employees__Proje__412EB0B6">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__RoleI__3F466844" Association="Self.FK__Employees__RoleI__3F466844">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Leaves__Employee__4CA06362" Association="Self.FK__Leaves__Employee__4CA06362">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Leaves" EntitySet="Leaves" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Leaves__ManagerI__4D94879B" Association="Self.FK__Leaves__ManagerI__4D94879B">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Leaves" EntitySet="Leaves" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

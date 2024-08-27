@@ -7,7 +7,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Admin Login</title>
+=======
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+    <title>Manager Login</title>
+========
+    <title>Admin Login</title>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
@@ -74,8 +82,18 @@
 </head>
 <body>
     <div class="login-container">
+<<<<<<< HEAD
         <h2>Admin Login</h2>
         @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+=======
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+        <h2>Manager Login</h2>
+        @using (Html.BeginForm("ManagerLogin", "Manager", FormMethod.Post))
+========
+        <h2>Admin Login</h2>
+        @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             @Html.AntiForgeryToken()
             <div class="form-group">
@@ -87,6 +105,15 @@
                 @Html.Password("password", null, new { @class = "form-control", required = "required" })
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+========
+            <div class="error-message">
+                @ViewBag.ErrorMessage
+            </div>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
     </div>
 </body>

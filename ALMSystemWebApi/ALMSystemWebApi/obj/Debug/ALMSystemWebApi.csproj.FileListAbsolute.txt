@@ -87,3 +87,216 @@ D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSyste
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CopyComplete
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.pdb
+<<<<<<< HEAD
+=======
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.AssemblyReference.cache
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CoreCompileInputs.cache
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.dll.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.AppContext.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Collections.Immutable.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Console.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Globalization.Calendars.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.Compression.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.FileSystem.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Net.Http.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Net.Sockets.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.ValueTuple.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XPath.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\VBCSCompiler.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\VBCSCompiler.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Antlr3.Runtime.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.SqlServer.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Net.Http.Formatting.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Helpers.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.WebHost.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Mvc.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Optimization.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Razor.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Deployment.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Razor.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\WebGrease.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.SqlServer.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Net.Http.Formatting.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Helpers.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.WebHost.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Mvc.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Optimization.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Razor.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Deployment.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Razor.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Antlr3.Runtime.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CopyComplete
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Buffers.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Memory.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Numerics.Vectors.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Threading.Tasks.Extensions.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Cors.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.Cors.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Buffers.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Memory.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Numerics.Vectors.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Threading.Tasks.Extensions.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.Cors.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.dll.config
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\ALMSystemWebApi.pdb
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.exe
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.exe.config
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csc.rsp
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.exe
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.exe.config
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\csi.rsp
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.AppContext.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Console.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.Compression.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Net.Http.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Net.Sockets.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.ValueTuple.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XPath.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.exe
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.exe.config
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\vbc.rsp
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Antlr3.Runtime.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Buffers.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Memory.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Numerics.Vectors.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Cors.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Helpers.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.Cors.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Mvc.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Optimization.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Razor.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\WebGrease.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Newtonsoft.Json.Bson.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Buffers.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Memory.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Numerics.Vectors.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Helpers.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.Cors.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Mvc.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Razor.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\System.Web.Optimization.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Antlr3.Runtime.pdb
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.AssemblyReference.cache
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CoreCompileInputs.cache
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CopyComplete
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
+C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.pdb
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

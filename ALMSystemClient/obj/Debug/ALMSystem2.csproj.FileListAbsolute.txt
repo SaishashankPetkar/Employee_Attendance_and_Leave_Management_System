@@ -156,3 +156,283 @@ C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.dll
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.pdb
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache
+<<<<<<< HEAD
+=======
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.dll.config
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.pdb
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csc.exe
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csc.exe.config
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csc.rsp
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csi.exe
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csi.exe.config
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\csi.rsp
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.AppContext.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Console.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Globalization.Calendars.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.IO.Compression.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.IO.FileSystem.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Net.Http.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Net.Sockets.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.ValueTuple.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Xml.XPath.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\vbc.exe
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\vbc.exe.config
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\vbc.rsp
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\VBCSCompiler.exe
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Antlr3.Runtime.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Microsoft.Web.Infrastructure.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Newtonsoft.Json.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Helpers.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Mvc.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Optimization.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Razor.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.Deployment.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.Razor.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\WebGrease.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Helpers.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Mvc.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Optimization.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.Razor.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.Deployment.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\System.Web.WebPages.Razor.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Newtonsoft.Json.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Antlr3.Runtime.pdb
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CoreCompileInputs.cache
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\obj\Debug\ALMSystem2.dll
+D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\obj\Debug\ALMSystem2.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\ALMSystem2.dll.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\ALMSystem2.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\ALMSystem2.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csc.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csc.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csc.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csi.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csi.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\csi.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.AppContext.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Console.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Globalization.Calendars.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.IO.Compression.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.IO.FileSystem.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Net.Http.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Net.Sockets.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.ValueTuple.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Xml.XPath.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\vbc.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\vbc.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\vbc.rsp
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\VBCSCompiler.exe
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Antlr3.Runtime.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Microsoft.Web.Infrastructure.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Newtonsoft.Json.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Buffers.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Memory.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Net.Http.Json.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Numerics.Vectors.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Text.Encodings.Web.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Text.Json.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Threading.Tasks.Extensions.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.ValueTuple.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Helpers.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Mvc.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Optimization.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Razor.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.Deployment.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.Razor.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\WebGrease.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Buffers.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Memory.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Net.Http.Json.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Numerics.Vectors.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Text.Encodings.Web.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Text.Json.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Threading.Tasks.Extensions.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.ValueTuple.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Helpers.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Mvc.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Optimization.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.Razor.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.Deployment.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\System.Web.WebPages.Razor.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Newtonsoft.Json.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Antlr3.Runtime.pdb
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CoreCompileInputs.cache
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\obj\Debug\ALMSystem2.dll
+D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemClient\obj\Debug\ALMSystem2.pdb
+D:\Main_Project\ALMSystemClient\bin\ALMSystem2.dll.config
+D:\Main_Project\ALMSystemClient\bin\ALMSystem2.dll
+D:\Main_Project\ALMSystemClient\bin\ALMSystem2.pdb
+D:\Main_Project\ALMSystemClient\bin\roslyn\csc.exe
+D:\Main_Project\ALMSystemClient\bin\roslyn\csc.exe.config
+D:\Main_Project\ALMSystemClient\bin\roslyn\csc.rsp
+D:\Main_Project\ALMSystemClient\bin\roslyn\csi.exe
+D:\Main_Project\ALMSystemClient\bin\roslyn\csi.exe.config
+D:\Main_Project\ALMSystemClient\bin\roslyn\csi.rsp
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Main_Project\ALMSystemClient\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.AppContext.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Collections.Immutable.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Console.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Globalization.Calendars.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.IO.Compression.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.IO.FileSystem.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Net.Http.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Net.Sockets.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Reflection.Metadata.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.ValueTuple.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Xml.XPath.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Main_Project\ALMSystemClient\bin\roslyn\vbc.exe
+D:\Main_Project\ALMSystemClient\bin\roslyn\vbc.exe.config
+D:\Main_Project\ALMSystemClient\bin\roslyn\vbc.rsp
+D:\Main_Project\ALMSystemClient\bin\roslyn\VBCSCompiler.exe
+D:\Main_Project\ALMSystemClient\bin\roslyn\VBCSCompiler.exe.config
+D:\Main_Project\ALMSystemClient\bin\Antlr3.Runtime.dll
+D:\Main_Project\ALMSystemClient\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Main_Project\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Main_Project\ALMSystemClient\bin\Microsoft.Web.Infrastructure.dll
+D:\Main_Project\ALMSystemClient\bin\Newtonsoft.Json.dll
+D:\Main_Project\ALMSystemClient\bin\System.Buffers.dll
+D:\Main_Project\ALMSystemClient\bin\System.Memory.dll
+D:\Main_Project\ALMSystemClient\bin\System.Net.Http.Json.dll
+D:\Main_Project\ALMSystemClient\bin\System.Numerics.Vectors.dll
+D:\Main_Project\ALMSystemClient\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Main_Project\ALMSystemClient\bin\System.Text.Encodings.Web.dll
+D:\Main_Project\ALMSystemClient\bin\System.Text.Json.dll
+D:\Main_Project\ALMSystemClient\bin\System.Threading.Tasks.Extensions.dll
+D:\Main_Project\ALMSystemClient\bin\System.ValueTuple.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.Helpers.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.Mvc.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.Optimization.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.Razor.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.Deployment.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.dll
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.Razor.dll
+D:\Main_Project\ALMSystemClient\bin\WebGrease.dll
+D:\Main_Project\ALMSystemClient\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Main_Project\ALMSystemClient\bin\System.Buffers.xml
+D:\Main_Project\ALMSystemClient\bin\System.Memory.xml
+D:\Main_Project\ALMSystemClient\bin\System.Net.Http.Json.xml
+D:\Main_Project\ALMSystemClient\bin\System.Numerics.Vectors.xml
+D:\Main_Project\ALMSystemClient\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Main_Project\ALMSystemClient\bin\System.Text.Encodings.Web.xml
+D:\Main_Project\ALMSystemClient\bin\System.Text.Json.xml
+D:\Main_Project\ALMSystemClient\bin\System.Threading.Tasks.Extensions.xml
+D:\Main_Project\ALMSystemClient\bin\System.ValueTuple.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.Helpers.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.Mvc.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.Optimization.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.Razor.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.Deployment.xml
+D:\Main_Project\ALMSystemClient\bin\System.Web.WebPages.Razor.xml
+D:\Main_Project\ALMSystemClient\bin\Newtonsoft.Json.xml
+D:\Main_Project\ALMSystemClient\bin\Antlr3.Runtime.pdb
+D:\Main_Project\ALMSystemClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache
+D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CoreCompileInputs.cache
+D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
+D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.dll
+D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.pdb
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

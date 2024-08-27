@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿@model IEnumerable<ALMSystem2.Models.MVCEmployees>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 @{
     ViewData["Title"] = "Employee Details";
 }
@@ -15,9 +19,15 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>HireDate</th>
+<<<<<<< HEAD
                 <th>RoleID</th>
                 <th>ManagerID</th>
                 <th>ProjectID</th>
+=======
+                <th>Role</th>
+                <th>ManagerID</th>
+                <th>Project</th>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
                 <th>LeaveBalance</th>
                 <th>No_of_leave</th>
                 <th>Emp_status</th>
@@ -25,6 +35,7 @@
             </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
             <tr>
                 <td>1</td>
                 <td>John Doe</td>
@@ -47,6 +58,35 @@
             </tr>
             <!-- Add more rows as necessary with different hardcoded values -->
         </tbody>
+=======
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.EmployeeID)</td>
+                    <td>@Html.DisplayFor(modelItem => item.EmployeeName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                    <td>@Html.DisplayFor(modelItem => item.HireDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Role.RoleName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ManagerID)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Project.ProjectName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LeaveBalance)</td>
+                    <td>@Html.DisplayFor(modelItem => item.No_of_leave)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Emp_status)</td>
+                    <td>
+                        <a href="/Admin/EditEmployee/@item.EmployeeID" class="btn btn-warning btn-sm">Edit</a>
+                        @using (Html.BeginForm("DeleteEmployee", "Admin", FormMethod.Post, new { id = item.EmployeeID }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("id", item.EmployeeID)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this employee?');">Delete</button>
+                        }
+                    </td>
+                </tr>
+            }
+                <!-- Add more rows as necessary with different hardcoded values -->
+            </tbody>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </table>
 </div>
 

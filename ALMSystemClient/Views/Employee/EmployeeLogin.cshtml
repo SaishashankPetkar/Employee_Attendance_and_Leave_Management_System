@@ -74,6 +74,7 @@
 <body>
     <div class="login-container">
         <h2>Employee Login</h2>
+<<<<<<< HEAD
         @using (Html.BeginForm("EmployeeLogin", "Employee", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
@@ -88,5 +89,49 @@
             <button type="submit" class="btn btn-primary">Login</button>
         }
     </div>
+=======
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div id="error-message" class="text-danger mt-2"></div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>$('#loginForm').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: 'https://localhost:44323/api/Employees/Login',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    Email: $('#email').val(),
+                    Password: $('#password').val()
+                }),
+                success: function (data) {
+                    console.log('Login successful:', data);
+                    // Store employee details in a cookie
+                    document.cookie = "employee=" + encodeURIComponent(JSON.stringify(data)) + "; path=/";
+                    window.location.href = '/Employee/EmployeeDashboard';
+                },
+                error: function (xhr) {
+                    console.error(xhr.responseText);
+                    if (xhr.status === 401) {
+                        $('#error-message').text('Invalid email or password.');
+                    } else {
+                        $('#error-message').text('An error occurred. Please try again.');
+                    }
+                }
+            });
+        });</script>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 </body>
 </html>

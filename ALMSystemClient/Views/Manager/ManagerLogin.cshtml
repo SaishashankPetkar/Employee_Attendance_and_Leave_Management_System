@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿@{
+=======
+﻿
+@{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     Layout = null; // or set to your layout file if you have one
 }
 
@@ -7,17 +12,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
     <title>Manager Login</title>
+========
+    <title>Admin Login</title>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+=======
+    <title>Employee Login</title>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             height: 100vh;
-            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Blue gradient background */
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
         }
 
         .login-container {
@@ -27,7 +39,15 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
         }
+
+            .login-container.hidden {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
 
             .login-container h2 {
                 margin-bottom: 1rem;
@@ -62,12 +82,22 @@
             .btn-primary:active {
                 transform: scale(0.98);
             }
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </style>
 </head>
 <body>
     <div class="login-container">
+<<<<<<< HEAD
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
         <h2>Manager Login</h2>
         @using (Html.BeginForm("ManagerLogin", "Manager", FormMethod.Post))
+========
+        <h2>Admin Login</h2>
+        @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
         {
             @Html.AntiForgeryToken()
             <div class="form-group">
@@ -79,7 +109,59 @@
                 @Html.Password("password", null, new { @class = "form-control", required = "required" })
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+========
+            <div class="error-message">
+                @ViewBag.ErrorMessage
+            </div>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
         }
     </div>
+=======
+        <h2>Manager Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div id="error-message" class="text-danger mt-2"></div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+$('#loginForm').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: 'https://localhost:44323/api/Manager/Login',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    Email: $('#email').val(),
+                    Password: $('#password').val()
+                }),
+                success: function (data) {
+                    console.log('Login successful:', data);
+                    // Store employee details in a cookie
+                    document.cookie = "employee=" + encodeURIComponent(JSON.stringify(data)) + "; path=/";
+                    window.location.href = '/Manager/ManagerDashboard';
+                },
+                error: function (xhr) {
+                    console.error(xhr.responseText);
+                    if (xhr.status === 401) {
+                        $('#error-message').text('Invalid email or password.');
+                    } else {
+                        $('#error-message').text('An error occurred. Please try again.');
+                    }
+                }
+            });
+        });</script>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 </body>
 </html>

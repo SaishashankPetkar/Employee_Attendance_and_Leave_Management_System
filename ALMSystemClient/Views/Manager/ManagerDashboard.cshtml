@@ -156,10 +156,17 @@
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
+<<<<<<< HEAD
         <a href="@Url.Action("ViewEmployees", "Manager")">View Employees</a>
         <a href="@Url.Action("ViewPendingAttendance", "Manager")">View Pending Attendance Requests</a>
         <a href="@Url.Action("ViewPendingLeave", "Manager")">View Pending Leave Requests</a>
         <a href="@Url.Action("Logout", "Manager")" class="btn-dashboard">Logout</a>
+=======
+        <a href="/Manager/EmployeesDetails">View Employees</a>
+        <a href="/Manager/ViewPendingAttendance">View Pending Attendance Requests</a>
+        <a href="/Manager/ViewPendingLeave">View Pending Leave Requests</a>
+        <a href="@Url.Action("Logout", "Manager")">Logout</a>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </div>
 
     <div class="content">
@@ -170,18 +177,30 @@
 
         <div class="details-box">
             <h3>Manager Details</h3>
+<<<<<<< HEAD
             <p>Name: John Doe</p>
             <p>Position: Project Manager</p>
             <p>Department: IT</p>
             <p>Email: johndoe@example.com</p>
             <p>Phone: 123-456-7890</p>
+=======
+            <p class="card-text">Name: @ViewBag.Employee.EmployeeName</p>
+            <p class="card-text">Position: @ViewBag.Employee.RoleName</p>
+            <p class="card-text">Department: @ViewBag.Employee.ProjectName</p>
+            <p class="card-text">Email: @ViewBag.Employee.Email</p>
+            <p class="card-text">Phone: @ViewBag.Employee.Phone</p>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         </div>
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">View Employees</h5>
+                <h5 class="card-title">Employees Details</h5>
                 <p class="card-text">Manage employees under your supervision.</p>
+<<<<<<< HEAD
                 <a href="@Url.Action("ViewEmployees", "Manager")" class="btn-dashboard">View Employees</a>
+=======
+                <a href="/Manager/EmployeeDetails" class="btn-dashboard">View Employees</a>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             </div>
         </div>
 

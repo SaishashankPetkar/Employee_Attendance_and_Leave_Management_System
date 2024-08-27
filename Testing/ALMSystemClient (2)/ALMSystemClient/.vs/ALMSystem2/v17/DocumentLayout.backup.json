@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DB8598-A5EF-49E6-BC2B-0EF3C4FE42CA}|..\\ALMSystem2.Tests\\ALMSystem2.Tests.csproj|d:\\saishak file for unit testing\\almsystemclient (2)\\almsystem2.tests\\admincontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|d:\\saishak file for unit testing\\almsystemclient (2)\\almsystemclient\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DB8598-A5EF-49E6-BC2B-0EF3C4FE42CA}|..\\ALMSystem2.Tests\\ALMSystem2.Tests.csproj|d:\\saishak file for unit testing\\almsystemclient (2)\\almsystem2.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43B948C8-24F8-4D6E-A92D-697DA75B8338}|ALMSystem2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminControllerTests.cs",
+              "DocumentMoniker": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystem2.Tests\\AdminControllerTests.cs",
+              "RelativeDocumentMoniker": "..\\ALMSystem2.Tests\\AdminControllerTests.cs",
+              "ToolTip": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystem2.Tests\\AdminControllerTests.cs",
+              "RelativeToolTip": "..\\ALMSystem2.Tests\\AdminControllerTests.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T17:38:46.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystem2.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\ALMSystem2.Tests\\UnitTest1.cs",
+              "ToolTip": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystem2.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\ALMSystem2.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T17:26:32.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAACYCAAAAAAAAAAAAADECAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T07:00:09.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Saishak File for unit testing\\ALMSystemClient (2)\\ALMSystemClient\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T06:59:06.275Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

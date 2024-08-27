@@ -17,6 +17,15 @@ namespace ALMSystem2
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+<<<<<<< HEAD
+=======
+            );
+
+            routes.MapRoute(
+                name: "Employee",
+                url: "Employee/{action}/{id}",
+                defaults: new { controller = "Employee", action = "Login", id = UrlParameter.Optional }
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             );
 
             routes.MapRoute(
@@ -24,6 +33,12 @@ namespace ALMSystem2
                 url: "Employee/{action}/{id}",
                 defaults: new { controller = "Employee", action = "Login", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Admin",
+                url: "Admin/{action}/{id}",
+                defaults: new { controller = "Admin", action = "Login", id = UrlParameter.Optional }
+             );
         }
     }
 }

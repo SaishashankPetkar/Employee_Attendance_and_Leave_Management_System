@@ -159,12 +159,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Models\EmployeeViewModel.cs" />
+=======
     <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\EmployeeCreateViewModel.cs" />
     <Compile Include="Models\EmployeeViewModel.cs" />
     <Compile Include="Models\Leave.cs" />
     <Compile Include="Models\MVCEmployees.cs" />
     <Compile Include="Models\Project.cs" />
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +216,19 @@
     <Content Include="Views\Admin\EmployeeDetails.cshtml" />
     <Content Include="Views\Admin\CreateNewEmployee.cshtml" />
     <Content Include="Views\Admin\EditEmployee.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Employee\ApplyLeave.cshtml" />
+    <Content Include="Views\Employee\SubmitAttendance.cshtml" />
+    <Content Include="Views\Employee\ViewProjects.cshtml" />
+    <Content Include="Views\Admin\ProjectDetails.cshtml" />
+    <Content Include="Views\Admin\CreateNewProject.cshtml" />
+    <Content Include="Views\Admin\EditProject.cshtml" />
+    <Content Include="Views\Admin\AttendanceRequests.cshtml" />
+    <Content Include="Views\Admin\LeaveRequests.cshtml" />
+    <Content Include="Views\Manager\ViewEmployees.cshtml" />
+    <Content Include="Views\Manager\ViewPendingAttendance.cshtml" />
+    <Content Include="Views\Manager\ViewPendingLeave.cshtml" />
+=======
     <Content Include="Views\Admin\CreateNewProject.cshtml" />
     <Content Include="Views\Admin\EditProject.cshtml" />
     <Content Include="Views\Admin\ProjectDetails.cshtml" />
@@ -225,6 +242,7 @@
     <Content Include="Views\Manager\ViewPendingAttendance.cshtml" />
     <Content Include="Views\Manager\ViewPendingLeave.cshtml" />
     <Content Include="Views\Manager\EmployeeDetails.cshtml" />
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

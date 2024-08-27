@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿@{
+=======
 ﻿@model ALMSystem2.Models.Project
 @{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     ViewData["Title"] = "Create New Project";
 }
 
@@ -9,6 +13,28 @@
 {
     @Html.AntiForgeryToken()
 
+<<<<<<< HEAD
+    <div class="form-group">
+        <label for="ProjectName">Project Name</label>
+        <input type="text" class="form-control" id="ProjectName" name="ProjectName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input type="date" class="form-control" id="StartDate" name="StartDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="EndDate">End Date</label>
+        <input type="date" class="form-control" id="EndDate" name="EndDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input type="text" class="form-control" id="Status" name="Status" required />
+    </div>
+
+=======
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 <div class="form-group">
     @Html.LabelFor(model => model.ProjectName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -25,6 +51,7 @@
         @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })<br />
     </div>
 </div>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <button type="submit" class="btn btn-primary">Create</button>
     <a href="@Url.Action("ProjectDetails", "Admin")" class="btn btn-secondary">Cancel</a>
 }

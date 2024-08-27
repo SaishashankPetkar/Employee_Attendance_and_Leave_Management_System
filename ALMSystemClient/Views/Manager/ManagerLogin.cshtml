@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿@{
+=======
 ﻿
 @{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     Layout = null; // or set to your layout file if you have one
 }
 
@@ -8,7 +12,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+    <title>Manager Login</title>
+========
+    <title>Admin Login</title>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+=======
     <title>Employee Login</title>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
@@ -70,10 +82,42 @@
             .btn-primary:active {
                 transform: scale(0.98);
             }
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </style>
 </head>
 <body>
     <div class="login-container">
+<<<<<<< HEAD
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+        <h2>Manager Login</h2>
+        @using (Html.BeginForm("ManagerLogin", "Manager", FormMethod.Post))
+========
+        <h2>Admin Login</h2>
+        @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.Label("username")
+                @Html.TextBox("username", null, new { @class = "form-control", required = "required" })
+            </div>
+            <div class="form-group">
+                @Html.Label("password")
+                @Html.Password("password", null, new { @class = "form-control", required = "required" })
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+<<<<<<<< HEAD:ALMSystemClient/Views/Manager/ManagerLogin.cshtml
+========
+            <div class="error-message">
+                @ViewBag.ErrorMessage
+            </div>
+>>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0:ALMSystemClient/Views/Admin/AdminLogin.cshtml
+        }
+    </div>
+=======
         <h2>Manager Login</h2>
         <form id="loginForm">
             <div class="form-group">
@@ -118,5 +162,6 @@ $('#loginForm').on('submit', function (e) {
                 }
             });
         });</script>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 </body>
 </html>

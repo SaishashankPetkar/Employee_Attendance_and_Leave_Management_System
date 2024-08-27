@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+<<<<<<< HEAD
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+=======
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 using System.Web.Http;
 using System.Web.Http.Description;
 using ALMSystemWebApi.Models;
@@ -16,6 +22,14 @@ namespace ALMSystemWebApi.Controllers
 {
     public class EmployeesController : ApiController
     {
+<<<<<<< HEAD
+        private LeaveMasterEntities db = new LeaveMasterEntities();
+
+        // GET: api/Employees
+        public IQueryable<Employee> GetEmployees()
+        {
+            return db.Employees;
+=======
         private LeaveMasterEntities2 db = new LeaveMasterEntities2();
 
         [HttpPost]
@@ -59,6 +73,7 @@ namespace ALMSystemWebApi.Controllers
         public IEnumerable<Employee> GetEmployees()
         {
             return db.Employees.Include(e => e.Role).Include(e => e.Project);
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
 
         // GET: api/Employees/5
@@ -74,6 +89,9 @@ namespace ALMSystemWebApi.Controllers
             return Ok(employee);
         }
 
+<<<<<<< HEAD
+        // PUT: api/Employees/5
+=======
         // GET: api/Roles
         [HttpGet]
         [Route("api/Roles")]
@@ -92,6 +110,7 @@ namespace ALMSystemWebApi.Controllers
 
         // PUT: api/Employees/5
         [HttpPut]
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEmployee(int id, Employee employee)
         {
@@ -111,6 +130,17 @@ namespace ALMSystemWebApi.Controllers
             {
                 db.SaveChanges();
             }
+<<<<<<< HEAD
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmployeeExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+=======
             catch (DbEntityValidationException ex)
             {
                 foreach (var entityValidationError in ex.EntityValidationErrors)
@@ -119,6 +149,7 @@ namespace ALMSystemWebApi.Controllers
                     {
                         Console.WriteLine("Property: { 0}, Error: { 1}", validationError.PropertyName, validationError.ErrorMessage);
                     }
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
                 }
             }
 
@@ -133,6 +164,11 @@ namespace ALMSystemWebApi.Controllers
             {
                 return BadRequest(ModelState);
             }
+<<<<<<< HEAD
+
+            db.Employees.Add(employee);
+            db.SaveChanges();
+=======
             if (!employee.LeaveBalance.HasValue)
             {
                 employee.LeaveBalance = 3;
@@ -160,25 +196,40 @@ namespace ALMSystemWebApi.Controllers
                     }
                 }
             }
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 
             return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeID }, employee);
         }
 
         // DELETE: api/Employees/5
+<<<<<<< HEAD
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult DeleteEmployee(int id)
+        {
+            Employee employee = db.Employees.Find(id);
+=======
         [HttpPost]
         [Route("api/Employees/SoftDelete/{id}")]
         public async Task<IHttpActionResult> SoftDelete(int id)
         {
             var employee = await db.Employees.FindAsync(id);
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             if (employee == null)
             {
                 return NotFound();
             }
 
+<<<<<<< HEAD
+            db.Employees.Remove(employee);
+            db.SaveChanges();
+
+            return Ok(employee);
+=======
             employee.Emp_status = "inactive"; // Or whatever status indicates "soft delete"
             await db.SaveChangesAsync();
 
             return Ok();
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
 
         protected override void Dispose(bool disposing)
@@ -195,5 +246,9 @@ namespace ALMSystemWebApi.Controllers
             return db.Employees.Count(e => e.EmployeeID == id) > 0;
         }
     }
+<<<<<<< HEAD
+}
+=======
 }
 
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

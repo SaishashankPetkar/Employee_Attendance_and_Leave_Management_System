@@ -87,6 +87,8 @@ D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSyste
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CopyComplete
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.pdb
+<<<<<<< HEAD
+=======
 D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.AssemblyReference.cache
 D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CoreCompileInputs.cache
 D:\Training Final Project\CopyFolderForAttendanceandLeaveManagementSystem\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
@@ -297,3 +299,4 @@ C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\ob
 C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.csproj.CopyComplete
 C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.dll
 C:\Users\kajals\Downloads\ALMSystemWebApi (2)\ALMSystemWebApi\ALMSystemWebApi\obj\Debug\ALMSystemWebApi.pdb
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

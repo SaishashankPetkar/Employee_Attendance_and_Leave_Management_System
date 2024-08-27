@@ -156,6 +156,8 @@ C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.dll
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.pdb
 C:\project backup\ALMSystemClient\obj\Debug\ALMSystem2.csproj.AssemblyReference.cache
+<<<<<<< HEAD
+=======
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.dll.config
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.dll
 D:\Training Final Project\EmpAttendanceAndLeaveManagementSystem_Project\ALMSystemClient\bin\ALMSystem2.pdb
@@ -433,3 +435,4 @@ D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CoreCompileInputs.ca
 D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.csproj.CopyComplete
 D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.dll
 D:\Main_Project\ALMSystemClient\obj\Debug\ALMSystem2.pdb
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

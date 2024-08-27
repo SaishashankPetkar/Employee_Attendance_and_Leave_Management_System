@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+﻿@{
+=======
 ﻿@model ALMSystem2.Models.EmployeeCreateViewModel
 
 @{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     ViewData["Title"] = "Edit Employee";
 }
 
@@ -11,6 +15,55 @@
     @Html.AntiForgeryToken()
 
     <div class="form-group">
+<<<<<<< HEAD
+        <label for="EmployeeName">Employee Name</label>
+        <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" value="@ViewBag.EmployeeName" />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@ViewBag.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" value="@ViewBag.Phone" />
+    </div>
+
+    <div class="form-group">
+        <label for="HireDate">Hire Date</label>
+        <input type="text" class="form-control" id="HireDate" name="HireDate" value="@ViewBag.HireDate" />
+    </div>
+
+    <div class="form-group">
+        <label for="RoleID">Role ID</label>
+        <input type="text" class="form-control" id="RoleID" name="RoleID" value="@ViewBag.RoleID" />
+    </div>
+
+    <div class="form-group">
+        <label for="ManagerID">Manager ID</label>
+        <input type="text" class="form-control" id="ManagerID" name="ManagerID" value="@ViewBag.ManagerID" />
+    </div>
+
+    <div class="form-group">
+        <label for="ProjectID">Project ID</label>
+        <input type="text" class="form-control" id="ProjectID" name="ProjectID" value="@ViewBag.ProjectID" />
+    </div>
+
+    <div class="form-group">
+        <label for="LeaveBalance">Leave Balance</label>
+        <input type="text" class="form-control" id="LeaveBalance" name="LeaveBalance" value="@ViewBag.LeaveBalance" />
+    </div>
+
+    <div class="form-group">
+        <label for="No_of_leave">Number of Leaves Taken</label>
+        <input type="text" class="form-control" id="No_of_leave" name="No_of_leave" value="@ViewBag.No_of_leave" />
+    </div>
+
+    <div class="form-group">
+        <label for="Emp_status">Employee Status</label>
+        <input type="text" class="form-control" id="Emp_status" name="Emp_status" value="@ViewBag.Emp_status" />
+=======
         @Html.LabelFor(model => model.Employee.EmployeeID, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Employee.EmployeeID, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly" } })
@@ -106,6 +159,7 @@
             @Html.EditorFor(model => model.Employee.Password, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Employee.Password, "", new { @class = "text-danger" })
         </div>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
@@ -164,4 +218,8 @@
         .btn-secondary:hover {
             background-color: #5a6268;
         }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0

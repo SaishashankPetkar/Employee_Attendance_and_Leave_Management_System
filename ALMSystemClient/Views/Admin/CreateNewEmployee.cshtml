@@ -1,13 +1,73 @@
+<<<<<<< HEAD
+﻿@{
+=======
 ﻿@model ALMSystem2.Models.EmployeeCreateViewModel
 @{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     ViewData["Title"] = "Create New Employee";
 }
 
 <h2>Create New Employee</h2>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
+<<<<<<< HEAD
+    <div class="form-group">
+        <label for="EmployeeName">Employee Name</label>
+        <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" required />
+    </div>
+
+    <div class="form-group">
+        <label for="HireDate">Hire Date</label>
+        <input type="date" class="form-control" id="HireDate" name="HireDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="RoleID">Role ID</label>
+        <input type="text" class="form-control" id="RoleID" name="RoleID" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ManagerID">Manager ID</label>
+        <input type="text" class="form-control" id="ManagerID" name="ManagerID" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ProjectID">Project ID</label>
+        <input type="text" class="form-control" id="ProjectID" name="ProjectID" required />
+    </div>
+
+    <div class="form-group">
+        <label for="LeaveBalance">Leave Balance</label>
+        <input type="text" class="form-control" id="LeaveBalance" name="LeaveBalance" required />
+    </div>
+
+    <div class="form-group">
+        <label for="No_of_leave">Number of Leaves Taken</label>
+        <input type="text" class="form-control" id="No_of_leave" name="No_of_leave" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Emp_status">Employee Status</label>
+        <input type="text" class="form-control" id="Emp_status" name="Emp_status" required />
+    </div>
+
+=======
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 <div class="form-group">
     @Html.LabelFor(model => model.Employee.EmployeeName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -78,6 +138,7 @@
         @Html.ValidationMessageFor(model => model.Employee.Password, "", new { @class = "text-danger" })<br />
     </div>
 </div>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     <button type="submit" class="btn btn-primary">Create</button>
     <a href="@Url.Action("EmployeeDetails", "Admin")" class="btn btn-secondary">Cancel</a>
 }
@@ -90,4 +151,8 @@
         margin: 0;
         padding: 0;
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 </style>

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿@{
+=======
 ﻿@model ALMSystem2.Models.Project
 @{
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     ViewData["Title"] = "Edit Project";
 }
 
@@ -9,6 +13,26 @@
 {
     @Html.AntiForgeryToken()
 
+<<<<<<< HEAD
+    <div class="form-group">
+        <label for="ProjectName">Project Name</label>
+        <input type="text" class="form-control" id="ProjectName" name="ProjectName" value="@ViewBag.ProjectName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input type="date" class="form-control" id="StartDate" name="StartDate" value="@ViewBag.StartDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="EndDate">End Date</label>
+        <input type="date" class="form-control" id="EndDate" name="EndDate" value="@ViewBag.EndDate" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input type="text" class="form-control" id="Status" name="Status" value="@ViewBag.Status" required />
+=======
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ProjectID)
 
@@ -26,6 +50,7 @@
             @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })<br />
         </div>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </div>
 
     <button type="submit" class="btn btn-primary">Update</button>

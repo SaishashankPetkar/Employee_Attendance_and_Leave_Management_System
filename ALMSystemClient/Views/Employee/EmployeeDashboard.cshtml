@@ -121,14 +121,40 @@
 <body>
     <div class="sidebar">
         <a href="#" class="active">Dashboard</a>
+<<<<<<< HEAD
+        <a href="@Url.Action("ApplyLeave", "Employee")">Apply for Leave</a>
+        <a href="@Url.Action("SubmitAttendance", "Employee")">Submit Attendance</a>
+        <a href="@Url.Action("ViewProjects", "Employee")">View Project Details</a>
+=======
         <a href="@Url.Action("LeaveDetails", "Employee")">Apply for Leave</a>
         <a href="@Url.Action("AttendanceDetails", "Employee")">Submit Attendance</a>
         @*<a href="@Url.Action("ViewProjects", "Employee")">View Project Details</a>*@
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         <a href="@Url.Action("Logout", "Employee")">Logout</a>
     </div>
 
     <div class="content">
         <div class="welcome-box">
+<<<<<<< HEAD
+            <h3>Welcome to the Employee Dashboard</h3>
+        </div>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Message"]
+            </div>
+        }
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Details</h5>
+                <p class="card-text">Name: LeaveMaster</p>
+                <p class="card-text">Position: Software Engineer</p>
+                <p class="card-text">Department: HealthCare</p>
+                <p class="card-text">Email: leavemaster@gmail.com</p>
+                <p class="card-text">Phone: 9393939495</p>
+=======
             <h5>Welcome to LeaveMaster Dashboard</h5>
         </div>
 
@@ -142,6 +168,7 @@
                 <p class="card-text">Phone: @ViewBag.Employee.Phone</p>
                 <p class="card-text">No. of Leaves Available: @Convert.ToInt32(ViewBag.Employee.LeaveBalance)</p>
                 <p class="card-text">No. of Leaves Taken: @Convert.ToInt32(ViewBag.Employee.No_of_leave)</p>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             </div>
         </div>
 
@@ -149,7 +176,11 @@
             <div class="card-body">
                 <h5 class="card-title">Apply for Leave</h5>
                 <p class="card-text">Submit your leave requests here.</p>
+<<<<<<< HEAD
+                <a href="@Url.Action("ApplyLeave", "Employee")" class="btn btn-primary">Apply Leave</a>
+=======
                 <a href="@Url.Action("LeaveDetails", "Employee")" class="btn btn-primary">Apply Leave</a>
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             </div>
         </div>
 
@@ -157,17 +188,29 @@
             <div class="card-body">
                 <h5 class="card-title">Submit Attendance</h5>
                 <p class="card-text">Record your attendance here.</p>
+<<<<<<< HEAD
+                <a href="@Url.Action("SubmitAttendance", "Employee")" class="btn btn-primary">Submit Attendance</a>
+            </div>
+        </div>
+
+        <div class="card">
+=======
                 <a href="@Url.Action("AttendanceDetails", "Employee")" class="btn btn-primary">Submit Attendance</a>
             </div>
         </div>
 
         @*<div class="card">
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             <div class="card-body">
                 <h5 class="card-title">View Project Details</h5>
                 <p class="card-text">View details related to your current projects.</p>
                 <a href="@Url.Action("ViewProjects", "Employee")" class="btn btn-primary">View Projects</a>
             </div>
+<<<<<<< HEAD
+        </div>
+=======
         </div>*@
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

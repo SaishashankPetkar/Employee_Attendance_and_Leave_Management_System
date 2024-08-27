@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
+using System.Web.Mvc;
+=======
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -8,11 +11,17 @@ using ALMSystem2.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Net.Http.Json;
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 
 namespace ALMSystem2.Controllers
 {
     public class AdminController : Controller
     {
+<<<<<<< HEAD
+        // GET: Admin/Login
+        public ActionResult AdminLogin()
+        {
+=======
         private readonly string _baseAddress = "https://localhost:44323/api/";
 
         // Private method to get HttpClient
@@ -33,6 +42,7 @@ namespace ALMSystem2.Controllers
         // GET: Admin/Login
         public ActionResult AdminLogin()
         {
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             if (Session["User"] != null) // Check if the user is already authenticated
             {
                 return RedirectToAction("AdminDashboard");
@@ -51,8 +61,12 @@ namespace ALMSystem2.Controllers
                 return RedirectToAction("AdminDashboard");
             }
 
+<<<<<<< HEAD
+            ModelState.AddModelError("", "Invalid login attempt.");
+=======
             // Set error message in ViewBag
             ViewBag.ErrorMessage = "Invalid login Credentials.";
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             return View();
         }
 
@@ -68,6 +82,17 @@ namespace ALMSystem2.Controllers
 
         // GET: Admin/Logout
         public ActionResult Logout()
+<<<<<<< HEAD
+        {
+            Session.Clear(); // Clear all session data
+            Session.Abandon(); // End the session
+            return RedirectToAction("AdminLogin");
+        }
+
+        // GET: Admin/EmployeeDetails
+        public ActionResult EmployeeDetails()
+        {
+=======
         {
             Session.Clear(); // Clear all session data
             Session.Abandon(); // End the session
@@ -130,10 +155,22 @@ namespace ALMSystem2.Controllers
         [HttpGet]
         public async Task<ActionResult> CreateNewEmployee()
         {
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            var employees = new List<object>
+            {
+                new { EmployeeID = 1, EmployeeName = "John Doe", Email = "johndoe@example.com", Phone = "123-456-7890", HireDate = DateTime.Now.AddYears(-5), RoleID = 1, ManagerID = 2, ProjectID = 1, LeaveBalance = 10, No_of_leave = 5, Emp_status = "Active" }
+                // Add more employees as necessary
+            };
+
+            ViewBag.Employees = employees; // Pass data to view
+            return View();
+=======
             var viewModel = new EmployeeCreateViewModel
             {
                 Employee = new MVCEmployees(),
@@ -142,16 +179,55 @@ namespace ALMSystem2.Controllers
             };
 
             return View(viewModel);
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateNewEmployee(EmployeeCreateViewModel viewModel)
+        // GET: Admin/CreateNewEmployee
+        public ActionResult CreateNewEmployee()
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+            return View();
+        }
+
+        // POST: Admin/CreateNewEmployee
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+<<<<<<< HEAD
+        public ActionResult CreateNewEmployee(FormCollection form)
+=======
+        public async Task<ActionResult> CreateNewEmployee(EmployeeCreateViewModel viewModel)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+<<<<<<< HEAD
+
+            // Extract form values
+            string employeeName = form["EmployeeName"];
+            string email = form["Email"];
+            string phone = form["Phone"];
+            DateTime hireDate = Convert.ToDateTime(form["HireDate"]);
+            int roleID = Convert.ToInt32(form["RoleID"]);
+            int managerID = Convert.ToInt32(form["ManagerID"]);
+            int projectID = Convert.ToInt32(form["ProjectID"]);
+            int leaveBalance = Convert.ToInt32(form["LeaveBalance"]);
+            int no_of_leave = Convert.ToInt32(form["No_of_leave"]);
+            string emp_status = form["Emp_status"];
+
+            // Add the new employee to the database (replace with actual data insertion logic)
+            // Example: db.AddEmployee(employeeName, email, phone, hireDate, roleID, managerID, projectID, leaveBalance, no_of_leave, emp_status);
+
+            return RedirectToAction("EmployeeDetails");
+        }
+
+        // GET: Admin/EditEmployee/1
+        public ActionResult EditEmployee(int id)
+=======
             if (ModelState.IsValid)
             {
                 using (var webclient = GetHttpClient())
@@ -175,11 +251,40 @@ namespace ALMSystem2.Controllers
 
         // GET: Admin/EditEmployee/1
         public async Task<ActionResult> EditEmployee(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Fetch the employee from the database using the id (replace with actual data retrieval logic)
+            var employee = new
+            {
+                EmployeeID = id,
+                EmployeeName = "John Doe",
+                Email = "johndoe@example.com",
+                Phone = "123-456-7890",
+                HireDate = DateTime.Now.AddYears(-5),
+                RoleID = 1,
+                ManagerID = 2,
+                ProjectID = 1,
+                LeaveBalance = 10,
+                No_of_leave = 5,
+                Emp_status = "Active"
+            };
+
+            // Pass the data to the view
+            ViewBag.Employee = employee;
+            return View();
+        }
+
+        // POST: Admin/EditEmployee/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditEmployee(int id, FormCollection form)
+=======
             if (id == 0)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
@@ -262,11 +367,28 @@ namespace ALMSystem2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteEmployee(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Extract form values (replace with actual logic)
+            string employeeName = form["EmployeeName"];
+            string email = form["Email"];
+            string phone = form["Phone"];
+            DateTime hireDate = Convert.ToDateTime(form["HireDate"]);
+            int roleID = Convert.ToInt32(form["RoleID"]);
+            int managerID = Convert.ToInt32(form["ManagerID"]);
+            int projectID = Convert.ToInt32(form["ProjectID"]);
+            int leaveBalance = Convert.ToInt32(form["LeaveBalance"]);
+            int no_of_leave = Convert.ToInt32(form["No_of_leave"]);
+            string emp_status = form["Emp_status"];
+
+            // Update employee in the database (replace with actual data update logic)
+=======
             using (var webclient = GetHttpClient())
             {
                 var response = await webclient.PostAsync($"Employees/SoftDelete/{id}", null);
@@ -279,16 +401,50 @@ namespace ALMSystem2.Controllers
                     ModelState.AddModelError(string.Empty, "Error occurred while deleting the employee.");
                 }
             }
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 
             return RedirectToAction("EmployeeDetails");
         }
 
+<<<<<<< HEAD
+        // POST: Admin/DeleteEmployee/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteEmployee(int id)
+=======
         public async Task<ActionResult> ProjectDetails()
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Simulate delete logic here (replace with actual delete logic)
+
+            return RedirectToAction("EmployeeDetails");
+        }
+
+        // GET: Admin/ProjectDetails
+        public ActionResult ProjectDetails()
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            var projects = new List<object>
+            {
+                new { ProjectID = 1, ProjectName = "Project Alpha", StartDate = DateTime.Now.AddMonths(-6), EndDate = DateTime.Now.AddMonths(6), Status = "Active" }
+                // Add more projects as necessary
+            };
+
+            ViewBag.Projects = projects; // Pass data to view
+            return View();
+        }
+
+=======
             IEnumerable<Project> projects = null;
             using (var webclient = GetHttpClient())
             {
@@ -306,6 +462,7 @@ namespace ALMSystem2.Controllers
             return View(projects);
         }
 
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         // GET: Admin/CreateNewProject
         public ActionResult CreateNewProject()
         {
@@ -319,12 +476,33 @@ namespace ALMSystem2.Controllers
         // POST: Admin/CreateNewProject
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
+        public ActionResult CreateNewProject(FormCollection form)
+=======
         public async Task<ActionResult> CreateNewProject(Project project)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Extract form values
+            string projectName = form["ProjectName"];
+            DateTime startDate = Convert.ToDateTime(form["StartDate"]);
+            DateTime endDate = Convert.ToDateTime(form["EndDate"]);
+            string status = form["Status"];
+
+            // Add the new project to the database (replace with actual data insertion logic)
+            // Example: db.AddProject(projectName, startDate, endDate, status);
+
+            return RedirectToAction("ProjectDetails");
+        }
+
+        // GET: Admin/EditProject/1
+        public ActionResult EditProject(int id)
+=======
             using (var webclient = GetHttpClient())
             {
                 var response = await webclient.PostAsJsonAsync("Project", project);
@@ -339,11 +517,28 @@ namespace ALMSystem2.Controllers
 
         // GET: Admin/EditProject/1
         public async Task<ActionResult> EditProject(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Fetch the project from the database using the id (replace with actual data retrieval logic)
+            var project = new
+            {
+                ProjectID = id,
+                ProjectName = "Project Alpha",
+                StartDate = DateTime.Now.AddMonths(-6),
+                EndDate = DateTime.Now.AddMonths(6),
+                Status = "Active"
+            };
+
+            // Pass the data to the view
+            ViewBag.Project = project;
+            return View();
+=======
             // Fetch the project from the database using the id (replace with actual data retrieval logic)
             Project project = null;
             using (var webclient = GetHttpClient())
@@ -360,17 +555,73 @@ namespace ALMSystem2.Controllers
                 return HttpNotFound();
             }
             return View(project);
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
 
         // POST: Admin/EditProject/1
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
+        public ActionResult EditProject(int id, FormCollection form)
+=======
         public async Task<ActionResult> EditProject(Project project)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Extract form values (replace with actual logic)
+            string projectName = form["ProjectName"];
+            DateTime startDate = Convert.ToDateTime(form["StartDate"]);
+            DateTime endDate = Convert.ToDateTime(form["EndDate"]);
+            string status = form["Status"];
+
+            // Update project in the database (replace with actual data update logic)
+
+            return RedirectToAction("ProjectDetails");
+        }
+
+        // POST: Admin/DeleteProject/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteProject(int id)
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            // Simulate delete logic here (replace with actual delete logic)
+
+            return RedirectToAction("ProjectDetails");
+        }
+
+        // GET: Admin/AttendanceRequests
+        public ActionResult AttendanceRequests()
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            var requests = new List<object>
+            {
+                new { RequestID = 1, EmployeeName = "John Doe", RequestDate = DateTime.Now.AddDays(-1), Status = "Pending" }
+                // Add more requests as necessary
+            };
+
+            ViewBag.Requests = requests; // Pass data to view
+            return View();
+        }
+
+        // POST: Admin/ApproveAttendanceRequest/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ApproveAttendanceRequest(int id)
+=======
             if (ModelState.IsValid)
             {
                 using (var webclient = GetHttpClient())
@@ -390,11 +641,24 @@ namespace ALMSystem2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteProject(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Simulate approval logic here (replace with actual approval logic)
+
+            return RedirectToAction("AttendanceRequests");
+        }
+
+        // POST: Admin/RejectAttendanceRequest/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RejectAttendanceRequest(int id)
+=======
             using (var webclient = GetHttpClient())
             {
                 var response = await webclient.PostAsync($"Project/SoftDelete/{id}", null);
@@ -412,11 +676,42 @@ namespace ALMSystem2.Controllers
         }
 
         public async Task<ActionResult> AttendanceRequests()
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Simulate rejection logic here (replace with actual rejection logic)
+
+            return RedirectToAction("AttendanceRequests");
+        }
+
+        // GET: Admin/LeaveRequests
+        public ActionResult LeaveRequests()
+        {
+            if (Session["User"] == null) // Check if the user is authenticated
+            {
+                return RedirectToAction("AdminLogin");
+            }
+
+            var requests = new List<object>
+            {
+                new { RequestID = 1, EmployeeName = "Jane Doe", RequestDate = DateTime.Now.AddDays(-2), Status = "Pending" }
+                // Add more requests as necessary
+            };
+
+            ViewBag.Requests = requests; // Pass data to view
+            return View();
+        }
+
+        // POST: Admin/ApproveLeaveRequest/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ApproveLeaveRequest(int id)
+=======
             IEnumerable<Attendance> attendanceList = null;
             using (var webclient = GetHttpClient())
             {
@@ -438,11 +733,24 @@ namespace ALMSystem2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ApproveAttendanceRequest(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Simulate approval logic here (replace with actual approval logic)
+
+            return RedirectToAction("LeaveRequests");
+        }
+
+        // POST: Admin/RejectLeaveRequest/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RejectLeaveRequest(int id)
+=======
             using (var webclient = GetHttpClient())
             {
                 var response = await webclient.PostAsync($"Attendance/Approve/{id}", null);
@@ -463,11 +771,16 @@ namespace ALMSystem2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RejectAttendanceRequest(int id)
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         {
             if (Session["User"] == null) // Check if the user is authenticated
             {
                 return RedirectToAction("AdminLogin");
             }
+<<<<<<< HEAD
+
+            // Simulate rejection logic here (replace with actual rejection logic)
+=======
             using (var webclient = GetHttpClient())
             {
                 var response = await webclient.PostAsync($"Attendance/Reject/{id}", null);
@@ -529,10 +842,18 @@ namespace ALMSystem2.Controllers
                     ModelState.AddModelError(string.Empty, "Error occurred while Approving the Leave.");
                 }
             }
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
 
             return RedirectToAction("LeaveRequests");
         }
 
+<<<<<<< HEAD
+        // Helper method to validate admin credentials
+        private bool IsValidAdmin(string username, string password)
+        {
+            // Replace with actual credential validation logic
+            return username == "admin" && password == "password";
+=======
         // POST: Admin/RejectLeaveRequest/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -556,6 +877,7 @@ namespace ALMSystem2.Controllers
             }
 
             return RedirectToAction("LeaveRequests");
+>>>>>>> 7f696cdbb8726d085feec7d422b8c0b4898de8d0
         }
     }
 }
